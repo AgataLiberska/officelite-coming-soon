@@ -12,45 +12,91 @@
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body> 
-  A simple solution to complex tasks is coming soon
+  <header class="container">
+      <img src="/assets/shared/logo.svg" alt="Officelite logo">
+  </header>
+  <section class="hero">
+    <div class="hero__image">
 
-  Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-  collaboration platform built with an intuitive interface to improve productivity.
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__content__heading">A simple solution to complex tasks is coming soon
+      </h1>
+      <span class="hero__content__tagline">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</span>
+      <button type="button" class="btn btn--cta">Get Started</button>
+    </div>
+  </section>
+  <section class="pricing">
+    <div class="pricing__card">
+      <h2 class="pricing__card__plan">Basic</h2>
+      <span class="pricing__card__price">Free</span>
+      <span class="pricing__card__details">Up to 5 users for free</span>
+      <ul class="pricing__card__features">
+        <li>Basic document collaboration</li>
+        <li>2 gb storage</li>
+        <li>Great security and support</li>
+      </ul>
+      <button class="btn btn--dark">Try for Free</button>
+    </div>
+    <div class="pricing__card">
+      <h2 class="pricing__card__plan">Pro</h2>
+      <span class="pricing__card__price">$9.99</span>
+      <span class="pricing__card__details">Per user, billed monthly</span>
+      <ul class="pricing__card__features">
+        <li>All essential integrations</li>
+        <li>50 gb storage</li>
+        <li>More control and insights</li>
+      </ul>
+      <button class="btn btn--dark">Try for Free</button>
+    </div>
+    <div class="pricing__card">
+      <h2 class="pricing__card__plan">Ultimate</h2>
+      <span class="pricing__card__price">$19.99</span>
+      <span class="pricing__card__details">Per user, billed monthly</span>
+      <ul class="pricing__card__features">
+        <li>Robust work management</li>
+        <li>100 gb storage</li>
+        <li>VIP support</li>
+      </ul>
+      <button class="btn btn--dark">Try for Free</button>
+    </div>
+  </section>
+  <section class="countdown">
+    <span class="countdown__text">Coming <span class="countdown__date">4 Nov 2020</span></span>
+    <div class="countdown__clock">
+      <div class="countdown__clock__days">
+        <span class="countdown__clock__days__number">
+          47
+        </span>
+        days
+      </div>
+      <div class="countdown__clock__hours">
+        <span class="countdown__clock__hours__number">
+          07
+        </span>
+        hours
+      </div>
+      <div class="countdown__clock__minutes">
+        <span class="countdown__clock__minutes__number">
+          56
+        </span>
+        min
+      </div>
+      <div class="countdown__clock__seconds">
+        <span class="countdown__clock__seconds__number">
+          14
+        </span>
+        sec
+      </div>
+    </div>
+    <button class="btn btn-cta">Get Started</button>
+  </section>  
 
-  Get Started
 
-  Basic
-  Free
-  Up to 5 users for free
-  Basic document collaboration
-  2 gb storage
-  Great security and support
-  Try for Free
-
-  Pro
-  $9.99
-  Per user, billed monthly
-  All essential integrations
-  50 gb storage
-  More control and insights
-  Try for Free
-
-  Ultimate
-  $19.99
-  Per user, billed monthly
-  Robust work management
-  100 gb storage
-  VIP support
-  Try for Free
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page
+  Coming 4 Nov 2020 -->
 
   <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-  Get Started
+
 </body>
 </html>
