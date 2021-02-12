@@ -3,17 +3,17 @@
     padding-top: 2.875rem;
     padding-bottom: 5rem;
     text-align: center;
-    
 }
 
 .header::before {
-    content: '';
+    content: "";
     position: absolute;
-    height: 28.625rem;
-    width: 28.625rem;
-    top: -170px;
-    left: -42px;
-    background-image: url(/assets/home/bg-pattern-header.svg);
-    background-size: cover;
-    z-index: -1;
+    top:0;
+    left:0;
+    right:0;
+    height: 288px;
+    background-image: url('/assets/home/bg-pattern-header.svg');
+    background-size: 458px;
+    background-repeat: no-repeat;
+    background-position: center -170px;
 }
