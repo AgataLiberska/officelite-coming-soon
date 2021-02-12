@@ -1,0 +1,33 @@
+.hero {
+
+}
+
+.hero__image {
+    position: relative;
+    height: 16rem;
+    padding-bottom: 4rem;
+    background-image: url('/assets/home/illustration-charts.svg');
+    background-size: auto 85%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.hero__content {
+    text-align: center;
+}
+
+.hero__content__heading {
+    margin: 0;
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+    line-height: 120%;
+    font-weight: 700;
+    color: $veryDarkGray;
+}
+
+.hero__content__tagline {
+    display: block;
+    font-size: 1rem;
+    line-height: 162%;
+    color: $darkGray;
+}
