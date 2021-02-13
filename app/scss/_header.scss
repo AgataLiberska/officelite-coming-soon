@@ -3,6 +3,12 @@
     padding-top: 2.875rem;
     padding-bottom: 5rem;
     text-align: center;
+
+    @include breakpoint-up(medium) {
+        padding-top: 4.5rem;
+        padding-bottom: 6.5rem;
+        text-align: left;
+    }
 }
 
 .header::before {
@@ -16,4 +22,10 @@
     background-size: 458px;
     background-repeat: no-repeat;
     background-position: center -170px;
+
+    @include breakpoint-up(medium) {
+        height: 502px;
+        background-size: 666px;
+        background-position: 373px -164px;
+    }
 }

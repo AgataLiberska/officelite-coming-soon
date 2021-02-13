@@ -27,6 +27,13 @@ a, a:hover, a:visited {
   padding-right: 1.5rem;
 }
 
+@media (min-width: 48rem) {
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
 .btn {
   display: block;
   margin: auto;
@@ -74,6 +81,14 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
+@media (min-width: 48rem) {
+  .header {
+    padding-top: 4.5rem;
+    padding-bottom: 6.5rem;
+    text-align: left;
+  }
+}
+
 .header::before {
   content: "";
   position: absolute;
@@ -85,6 +100,14 @@ a, a:hover, a:visited {
   background-size: 458px;
   background-repeat: no-repeat;
   background-position: center -170px;
+}
+
+@media (min-width: 48rem) {
+  .header::before {
+    height: 502px;
+    background-size: 666px;
+    background-position: 373px -164px;
+  }
 }
 
 .hero {
