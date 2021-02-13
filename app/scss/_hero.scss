@@ -1,21 +1,46 @@
 .hero {
+    padding-bottom: 6.25rem;
     text-align: center;
+
+    @include breakpoint-up(medium) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 8.75rem;
+    }
 }
 
 .hero__image {
     position: relative;
     height: 16rem;
     padding-bottom: 4rem;
+
+    @include breakpoint-up(medium) {
+        flex: 1;
+        order: 2;
+        height: 19.5rem;
+        padding-bottom: 0;
+        text-align: right;
+    }
 }
 
 .hero__image__img {
     height: 114%;
     width: auto;
     object-fit: contain;
+
+    @include breakpoint-up(medium) {
+        max-height: 112%;
+    }
 }
 
 .hero__content {
-    padding-bottom: 6.25rem;
+
+    @include breakpoint-up(medium) {
+        flex: 1;
+        order: 1;
+        text-align: left;
+    }
 }
 
 .hero__content__heading {
