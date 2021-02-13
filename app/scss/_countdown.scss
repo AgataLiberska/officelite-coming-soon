@@ -14,8 +14,12 @@
     background-color: $veryDarkGray;
     background-image: url('/assets/home/bg-pattern-footer.svg');
     background-size: cover;
-    background-position: center 7.5rem;
+    background-position: center 12.25rem;
     z-index: -1;
+
+    @include breakpoint-up(medium) {
+        height: 60rem;
+    }
 }
 
 .countdown__text {
@@ -38,6 +42,7 @@
     gap: 0.75rem;
     margin: auto;
     padding-bottom: 2.5rem;
+    max-width: 28rem;
 }
 
 .countdown__clock__card {
