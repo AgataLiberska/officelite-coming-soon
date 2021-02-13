@@ -1,0 +1,67 @@
+.countdown {
+    position: relative;
+    padding-bottom: 6.25rem;
+    text-align: center;
+}
+
+.countdown::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 78rem;
+    background-color: $veryDarkGray;
+    background-image: url('/assets/home/bg-pattern-footer.svg');
+    background-size: cover;
+    background-position: center 7.5rem;
+    z-index: -1;
+}
+
+.countdown__text {
+    display: block;
+    padding-bottom: 1.125rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 3rem;
+    color: white;
+    letter-spacing: 0.3125rem;
+}
+
+.countdown__date {
+    color: $blue;
+}
+
+.countdown__clock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+    gap: 0.75rem;
+    margin: auto;
+    padding-bottom: 2.5rem;
+}
+
+.countdown__clock__card {
+    background-color: $darkGray;
+    border-radius: 0.25rem;
+
+}
+
+.countdown__clock__card__number {
+    display: block;
+    padding: 0.75rem 1rem 0 1rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: white;
+}
+
+.countdown__clock__card__text {
+    display: block;
+    padding-bottom: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: $white;
+    opacity: 0.5;
+}
