@@ -11,6 +11,18 @@
     &:not(:last-child) {
         margin-bottom: 2rem;
     }
+
+    @include breakpoint-up(medium) {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2.75rem auto 3.5rem;
+        grid-template-areas:
+            "info ."
+            "info features"
+            "button .";
+        padding: 3rem 0 3rem 3rem; 
+        text-align: left;
+    }
 }
 
 .pricing__card--white {
@@ -31,15 +43,27 @@
     color: white;
 }
 
-.pricing__card__plan {
+.pricing__card__info {
+
+    @include breakpoint-up(medium) {
+        grid-area: info;
+        
+    }
+}
+
+.pricing__card__info__plan {
     margin: 0;
     padding-bottom: 2.5rem;
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.75rem;
+
+    @include breakpoint-up(medium) {
+        padding-bottom: 1rem;
+    }
 }
 
-.pricing__card__price {
+.pricing__card__info__price {
     display: block;
     font-size: 3.5rem;
     font-weight: 700;
@@ -47,11 +71,15 @@
     padding-bottom: 0.5rem;
 }
 
-.pricing__card__details {
+.pricing__card__info__details {
     display: block;
     font-size: 1rem;
     line-height: 1.75rem;
     padding-bottom: 3.5rem;
+
+    @include breakpoint-up(medium) {
+        padding-bottom: 0;
+    }
 }
 
 .pricing__card__features {
@@ -62,11 +90,22 @@
     font-size: 1rem;
     line-height: 1.75rem;
 
+    @include breakpoint-up(medium) {
+        grid-area: features;
+        padding-bottom: 0;
+    }
 }
 
 .pricing__card__features__item {
 
     &:not(:last-child) {
         padding-bottom: 1rem;
+    }
+}
+
+.pricing__card__button {
+
+    @include breakpoint-up(medium) {
+        grid-area: button;
     }
 }

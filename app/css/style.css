@@ -36,7 +36,6 @@ a, a:hover, a:visited {
 
 .btn {
   display: inline-block;
-  margin: auto;
   height: 3.5rem;
   width: 10.75rem;
   border-radius: 1.75rem;
@@ -207,6 +206,20 @@ a, a:hover, a:visited {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 48rem) {
+  .pricing__card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 2.75rem auto 3.5rem;
+        grid-template-rows: 2.75rem auto 3.5rem;
+        grid-template-areas: "info ." "info features" "button .";
+    padding: 3rem 0 3rem 3rem;
+    text-align: left;
+  }
+}
+
 .pricing__card--white {
   background-color: white;
   color: #333950;
@@ -224,7 +237,13 @@ a, a:hover, a:visited {
   color: white;
 }
 
-.pricing__card__plan {
+@media (min-width: 48rem) {
+  .pricing__card__info {
+    grid-area: info;
+  }
+}
+
+.pricing__card__info__plan {
   margin: 0;
   padding-bottom: 2.5rem;
   font-size: 1.25rem;
@@ -232,7 +251,13 @@ a, a:hover, a:visited {
   line-height: 1.75rem;
 }
 
-.pricing__card__price {
+@media (min-width: 48rem) {
+  .pricing__card__info__plan {
+    padding-bottom: 1rem;
+  }
+}
+
+.pricing__card__info__price {
   display: block;
   font-size: 3.5rem;
   font-weight: 700;
@@ -240,11 +265,17 @@ a, a:hover, a:visited {
   padding-bottom: 0.5rem;
 }
 
-.pricing__card__details {
+.pricing__card__info__details {
   display: block;
   font-size: 1rem;
   line-height: 1.75rem;
   padding-bottom: 3.5rem;
+}
+
+@media (min-width: 48rem) {
+  .pricing__card__info__details {
+    padding-bottom: 0;
+  }
 }
 
 .pricing__card__features {
@@ -256,8 +287,21 @@ a, a:hover, a:visited {
   line-height: 1.75rem;
 }
 
+@media (min-width: 48rem) {
+  .pricing__card__features {
+    grid-area: features;
+    padding-bottom: 0;
+  }
+}
+
 .pricing__card__features__item:not(:last-child) {
   padding-bottom: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .pricing__card__button {
+    grid-area: button;
+  }
 }
 
 .countdown {
