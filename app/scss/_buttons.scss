@@ -18,3 +18,21 @@
         background-color: $lightBlue;
     }
 }
+
+.btn--blue {
+    color: $blue;
+    background-color: $veryLightBlue;
+
+    &:hover {
+        background-color: $lightBlue;
+    }
+}
+
+.btn--white {
+    color: $blue;
+    background-color: white;
+
+    &:hover {
+        color: $medBlue;
+    }
+}

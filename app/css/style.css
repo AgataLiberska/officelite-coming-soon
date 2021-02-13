@@ -46,7 +46,25 @@ a, a:hover, a:visited {
 }
 
 .btn--cta:hover {
-  background-color: #829cff;
+  background-color: rgba(81, 117, 255, 0.25);
+}
+
+.btn--blue {
+  color: #5175ff;
+  background-color: rgba(81, 117, 255, 0.15);
+}
+
+.btn--blue:hover {
+  background-color: rgba(81, 117, 255, 0.25);
+}
+
+.btn--white {
+  color: #5175ff;
+  background-color: white;
+}
+
+.btn--white:hover {
+  color: #829cff;
 }
 
 .header {
@@ -105,5 +123,73 @@ a, a:hover, a:visited {
   font-size: 1rem;
   line-height: 1.625rem;
   color: #333950;
+}
+
+.pricing {
+  padding-bottom: 6.25rem;
+}
+
+.pricing__card {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.pricing__card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.pricing__card--white {
+  background-color: white;
+  color: #333950;
+}
+
+.pricing__card--white > .pricing__card__features {
+  color: #747b95;
+}
+
+.pricing__card--blue {
+  background-color: #5175ff;
+  background-image: url("/assets/home/bg-pattern-pricing.svg");
+  background-position: center -23.5rem;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.pricing__card__plan {
+  margin: 0;
+  padding-bottom: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.pricing__card__price {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4rem;
+  padding-bottom: 0.5rem;
+}
+
+.pricing__card__details {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  padding-bottom: 3.5rem;
+}
+
+.pricing__card__features {
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 2rem;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.pricing__card__features__item:not(:last-child) {
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
