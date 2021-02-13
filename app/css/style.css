@@ -110,7 +110,7 @@ a, a:hover, a:visited {
 }
 
 .hero {
-  padding-bottom: 6.25rem;
+  margin-bottom: 6.25rem;
   text-align: center;
 }
 
@@ -125,7 +125,7 @@ a, a:hover, a:visited {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-bottom: 8.75rem;
+    margin-bottom: 8.75rem;
   }
 }
 
@@ -192,7 +192,7 @@ a, a:hover, a:visited {
 }
 
 .pricing {
-  padding-bottom: 6.25rem;
+  margin-bottom: 6.25rem;
 }
 
 .pricing__card {
