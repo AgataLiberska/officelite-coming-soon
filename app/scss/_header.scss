@@ -34,4 +34,9 @@
         background-size: 1134px;
         background-position: 480px -464px;
     }
+
+    @include breakpoint-up(xlarge) {
+        background-position: 661px -419px;
+    }
+
 }
