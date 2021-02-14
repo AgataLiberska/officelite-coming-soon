@@ -28,4 +28,10 @@
         background-size: 666px;
         background-position: 373px -164px;
     }
+
+    @include breakpoint-up(large) {
+        height: 715px;
+        background-size: 1134px;
+        background-position: 480px -464px;
+    }
 }

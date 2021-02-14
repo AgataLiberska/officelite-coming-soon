@@ -28,4 +28,14 @@ a, a:hover, a:visited {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
+
+    @include breakpoint-up(large) {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding-left: 10.25rem;
+        padding-right: 10.25rem;
+    }
 }
