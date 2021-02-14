@@ -102,7 +102,7 @@ a, a:hover, a:visited {
   }
 }
 
-.header::before {
+.header--homepage::before {
   content: "";
   position: absolute;
   top: 0;
@@ -116,7 +116,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .header::before {
+  .header--homepage::before {
     height: 502px;
     background-size: 666px;
     background-position: 373px -164px;
@@ -124,7 +124,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 64rem) {
-  .header::before {
+  .header--homepage::before {
     height: 715px;
     background-size: 1134px;
     background-position: 480px -464px;
@@ -132,7 +132,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 90rem) {
-  .header::before {
+  .header--homepage::before {
     background-position: 661px -419px;
   }
 }
@@ -470,6 +470,7 @@ a, a:hover, a:visited {
   .countdown__text {
     grid-area: countdown-text;
     text-align: left;
+    padding-bottom: 0;
   }
 }
 

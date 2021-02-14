@@ -55,6 +55,7 @@
     @include breakpoint-up(xlarge) {
         grid-area: countdown-text;
         text-align: left;
+        padding-bottom: 0;
     }
 }
 

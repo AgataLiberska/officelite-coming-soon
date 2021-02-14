@@ -1,9 +1,5 @@
-@import 'mixins';
-@import 'variables';
-@import 'globals';
-@import 'buttons';
+@import 'utilities/_utilities';
+@import 'base/globals';
+@import 'components/_components';
 
-@import 'header';
-@import 'hero';
-@import 'pricing';
-@import 'countdown';
+@import 'home/_home';
