@@ -1,0 +1,126 @@
+.pricing {
+    margin-bottom: 6.25rem;
+
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        gap: 1.75rem;
+        margin-bottom: 5.5rem;
+    }
+}
+
+.pricing__card {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint-between(medium, large) {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2.75rem auto 3.5rem;
+        grid-template-areas:
+            "info ."
+            "info features"
+            "button .";
+        padding: 3rem 0 3rem 3rem; 
+        text-align: left;
+    }
+
+}
+
+.pricing__card--white {
+    background-color: white;
+    color: $darkGray;
+
+    > .pricing__card__features {
+        color: $gray;
+    }
+
+}
+
+.pricing__card--blue {
+    background-color: $blue;
+    background-image: url('/assets/home/bg-pattern-pricing.svg');
+    background-position: center -23.5rem;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.pricing__card__info {
+
+    @include breakpoint-between(medium, large) {
+        grid-area: info;
+    }
+}
+
+.pricing__card__info__plan {
+    margin: 0;
+    padding-bottom: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+
+    @include breakpoint-between(medium, large) {
+        padding-bottom: 1rem;
+    }
+}
+
+.pricing__card__info__price {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4rem;
+    padding-bottom: 0.5rem;
+}
+
+.pricing__card__info__details {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    padding-bottom: 3.5rem;
+
+    @include breakpoint-between(medium, large) {
+        padding-bottom: 0;
+    }
+}
+
+.pricing__card__features {
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 2rem;
+    list-style: none;
+    font-size: 1rem;
+    line-height: 1.75rem;
+
+    @include breakpoint-between(medium, large) {
+        grid-area: features;
+        padding-bottom: 0;
+    }
+}
+
+.pricing__card__features__item {
+
+    &:not(:last-child) {
+        padding-bottom: 1rem;
+    }
+}
+
+.pricing__card__button {
+
+    @include breakpoint-between(medium, large) {
+        grid-area: button;
+    }
+}

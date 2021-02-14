@@ -10,8 +10,541 @@ html {
 }
 
 body {
+  max-width: 100vw;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: 'Kumbh Sans', sans-serif;
+  background-color: #f2f2f2;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .container {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .container {
+    padding-left: 10.25rem;
+    padding-right: 10.25rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  height: 3.5rem;
+  width: 10.75rem;
+  border-radius: 1.75rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 3.5rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.btn--cta {
+  color: white;
+  background-color: #5175ff;
+}
+
+.btn--cta:hover {
+  background-color: #829cff;
+}
+
+.btn--blue {
+  color: #5175ff;
+  background-color: rgba(81, 117, 255, 0.15);
+}
+
+.btn--blue:hover {
+  background-color: rgba(81, 117, 255, 0.25);
+}
+
+.btn--white {
+  color: #5175ff;
+  background-color: white;
+}
+
+.btn--white:hover {
+  color: #829cff;
+}
+
+.header {
+  position: relative;
+  padding-top: 2.875rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .header {
+    padding-top: 4.5rem;
+    padding-bottom: 6.5rem;
+    text-align: left;
+  }
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 288px;
+  background-image: url("/assets/home/bg-pattern-header.svg");
+  background-size: 458px;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+}
+
+@media (min-width: 48rem) {
+  .header::before {
+    height: 502px;
+    background-size: 666px;
+    background-position: 373px -164px;
+  }
+}
+
+@media (min-width: 64rem) {
+  .header::before {
+    height: 715px;
+    background-size: 1134px;
+    background-position: 480px -464px;
+  }
+}
+
+@media (min-width: 90rem) {
+  .header::before {
+    background-position: 661px -419px;
+  }
+}
+
+.hero {
+  margin-bottom: 6.25rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 8.75rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero {
+    margin-bottom: 15.75rem;
+  }
+}
+
+.hero__image {
+  position: relative;
+  height: 16rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48rem) {
+  .hero__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 0;
+    text-align: right;
+  }
+}
+
+.hero__image__img {
+  height: 14rem;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (min-width: 48rem) {
+  .hero__image__img {
+    height: 23rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero__image__img {
+    height: 28rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero__image__img {
+    height: 38rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .hero__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero__content {
+    padding-top: 3.75rem;
+  }
+}
+
+.hero__content__heading {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: #25293a;
+}
+
+@media (min-width: 64rem) {
+  .hero__content__heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .hero__content__heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.hero__content__tagline {
+  display: block;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #333950;
+}
+
+@media (min-width: 64rem) {
+  .hero__content__tagline {
+    font-size: 1.25rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.pricing {
+  margin-bottom: 6.25rem;
+}
+
+@media (min-width: 64rem) {
+  .pricing {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pricing {
+    gap: 1.75rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+.pricing__card {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.pricing__card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 64rem) {
+  .pricing__card:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .pricing__card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 2.75rem auto 3.5rem;
+        grid-template-rows: 2.75rem auto 3.5rem;
+        grid-template-areas: "info ." "info features" "button .";
+    padding: 3rem 0 3rem 3rem;
+    text-align: left;
+  }
+}
+
+.pricing__card--white {
+  background-color: white;
+  color: #333950;
+}
+
+.pricing__card--white > .pricing__card__features {
+  color: #747b95;
+}
+
+.pricing__card--blue {
+  background-color: #5175ff;
+  background-image: url("/assets/home/bg-pattern-pricing.svg");
+  background-position: center -23.5rem;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .pricing__card__info {
+    grid-area: info;
+  }
+}
+
+.pricing__card__info__plan {
+  margin: 0;
+  padding-bottom: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .pricing__card__info__plan {
+    padding-bottom: 1rem;
+  }
+}
+
+.pricing__card__info__price {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4rem;
+  padding-bottom: 0.5rem;
+}
+
+.pricing__card__info__details {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  padding-bottom: 3.5rem;
+}
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .pricing__card__info__details {
+    padding-bottom: 0;
+  }
+}
+
+.pricing__card__features {
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 2rem;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .pricing__card__features {
+    grid-area: features;
+    padding-bottom: 0;
+  }
+}
+
+.pricing__card__features__item:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .pricing__card__button {
+    grid-area: button;
+  }
+}
+
+.countdown {
+  position: relative;
+  padding-bottom: 6.25rem;
+  text-align: center;
+}
+
+@media (min-width: 90rem) {
+  .countdown {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 3rem auto;
+        grid-template-rows: 3rem auto;
+        grid-template-areas: "countdown-text ." "countdown-clock countdown-button";
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.countdown::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 78rem;
+  background-color: #25293a;
+  background-image: url("/assets/home/bg-pattern-footer.svg");
+  background-size: cover;
+  background-position: center 12.25rem;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .countdown::after {
+    height: 60rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .countdown::after {
+    height: 47rem;
+    background-position: center -9.75rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .countdown::after {
+    height: 41rem;
+    background-position: -25rem -17rem;
+  }
+}
+
+.countdown__text {
+  display: block;
+  padding-bottom: 1.125rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 3rem;
+  color: white;
+  letter-spacing: 0.3125rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown__text {
+    grid-area: countdown-text;
+    text-align: left;
+  }
+}
+
+.countdown__date {
+  color: #5175ff;
+}
+
+.countdown__clock {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(3.5rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+  gap: 0.75rem;
+  margin: auto;
+  padding-bottom: 2.5rem;
+  max-width: 28rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown__clock {
+    grid-area: countdown-clock;
+    margin: 0;
+  }
+}
+
+.countdown__clock__card {
+  background-color: #333950;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 48rem) {
+  .countdown__clock__card {
+    max-width: 6.25rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.countdown__clock__card__number {
+  display: block;
+  padding: 0.75rem 1rem 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+@media (min-width: 48rem) {
+  .countdown__clock__card__number {
+    padding-top: 2rem;
+    font-size: 3.5rem;
+  }
+}
+
+.countdown__clock__card__text {
+  display: block;
+  padding-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: white;
+  opacity: 0.5;
+}
+
+@media (min-width: 48rem) {
+  .countdown__clock__card__text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .countdown__clock__link {
+    grid-area: countdown-button;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */

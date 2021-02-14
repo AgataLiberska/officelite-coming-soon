@@ -1,0 +1,94 @@
+.hero {
+    margin-bottom: 6.25rem;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8.75rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        margin-bottom: 15.75rem;
+    }
+}
+
+.hero__image {
+    position: relative;
+    height: 16rem;
+    padding-bottom: 4rem;
+
+    @include breakpoint-up(medium) {
+        flex: 1;
+        order: 2;
+        padding-bottom: 0;
+        text-align: right;
+    }
+}
+
+.hero__image__img {
+    height: 14rem;
+    width: auto;
+    object-fit: contain;
+
+    @include breakpoint-up(medium) {
+        height: 23rem;
+    }
+
+    @include breakpoint-up(large) {
+        height: 28rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        height: 38rem;
+    }
+}
+
+.hero__content {
+
+    @include breakpoint-up(medium) {
+        flex: 1;
+        order: 1;
+        text-align: left;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding-top: 3.75rem;
+    }
+}
+
+.hero__content__heading {
+    margin: 0;
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $veryDarkGray;
+
+    @include breakpoint-up(large) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+
+}
+
+.hero__content__tagline {
+    display: block;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    color: $darkGray;
+
+    @include breakpoint-up(large) {
+        font-size: 1.25rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+    }
+}

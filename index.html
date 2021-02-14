@@ -12,45 +12,106 @@
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body> 
-  A simple solution to complex tasks is coming soon
+  <header class="header container">
+      <img src="/assets/shared/logo.svg" alt="Officelite logo">
+  </header>
+    <section class="hero container">
+      <div class="hero__image">
+        <img class="hero__image__img" src="/assets/home/illustration-charts.svg" alt="">
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__content__heading">A simple solution to complex tasks is coming soon</h1>
+        <span class="hero__content__tagline">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</span>
+        <a href="/sign-up.html" class="btn btn--cta">Get Started</a>
+      </div>
+    </section>
+    <section class="pricing container">
+      <div class="pricing__card pricing__card--white">
+        <div class="pricing__card__info">
+          <h2 class="pricing__card__info__plan">Basic</h2>
+          <span class="pricing__card__info__price">Free</span>
+          <span class="pricing__card__info__details">Up to 5 users for free</span>
+        </div>
+        <ul class="pricing__card__features">
+          <li class="pricing__card__features__item">Basic document collaboration</li>
+          <li class="pricing__card__features__item">2 gb storage</li>
+          <li class="pricing__card__features__item">Great security and support</li>
+        </ul>
+        <a href="#" class="btn btn--blue pricing__card__button">Try for Free</a>
+      </div>
+      <div class="pricing__card pricing__card--blue">
+        <div class="pricing__card__info">
+          <h2 class="pricing__card__info__plan">Pro</h2>
+          <span class="pricing__card__info__price">$9.99</span>
+          <span class="pricing__card__info__details">Per user, billed monthly</span>
+        </div>
+        <ul class="pricing__card__features">
+          <li class="pricing__card__features__item">All essential integrations</li>
+          <li class="pricing__card__features__item">50 gb storage</li>
+          <li class="pricing__card__features__item">More control and insights</li>
+        </ul>
+        <a href="#" class="btn btn--white pricing__card__button">Try for Free</a>
+      </div>
+      <div class="pricing__card pricing__card--white">
+        <div class="pricing__card__info">
+          <h2 class="pricing__card__info__plan">Ultimate</h2>
+          <span class="pricing__card__info__price">$19.99</span>
+          <span class="pricing__card__info__details">Per user, billed monthly</span>
+        </div>
+        <ul class="pricing__card__features">
+          <li class="pricing__card__features__item">Robust work management</li>
+          <li class="pricing__card__features__item">100 gb storage</li>
+          <li class="pricing__card__features__item">VIP support</li>
+        </ul>
+        <a href="#" class="btn btn--blue pricing__card__button">Try for Free</a>
+      </div>
+    </section>
+    <section class="countdown container">
+      <span class="countdown__text">Coming <span class="countdown__date">4 Nov 2020</span></span>
+      <div class="countdown__clock">
+        <div class="countdown__clock__card">
+          <span class="countdown__clock__card__number countdown--days">
+            47
+          </span>
+          <span class="countdown__clock__card__text">
+            days
+          </span>
+        </div>
+        <div class="countdown__clock__card">
+          <span class="countdown__clock__card__number countdown--hours">
+            07
+          </span>
+          <span class="countdown__clock__card__text">
+            hours
+          </span>
+        </div>
+        <div class="countdown__clock__card">
+          <span class="countdown__clock__card__number countdown--minutes">
+            56
+          </span>
+          <span class="countdown__clock__card__text">
+            min
+          </span>
+        </div>
+        <div class="countdown__clock__card">
+          <span class="countdown__clock__card__number countdown--seconds">
+            14
+          </span>
+          <span class="countdown__clock__card__text">
+            sec
+          </span>
+        </div>
+      </div>
+      <a href="/sign-up.html" class="btn btn--cta countdown__clock__link">Get Started</a>
+    </section>
+ 
+    
 
-  Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-  collaboration platform built with an intuitive interface to improve productivity.
 
-  Get Started
-
-  Basic
-  Free
-  Up to 5 users for free
-  Basic document collaboration
-  2 gb storage
-  Great security and support
-  Try for Free
-
-  Pro
-  $9.99
-  Per user, billed monthly
-  All essential integrations
-  50 gb storage
-  More control and insights
-  Try for Free
-
-  Ultimate
-  $19.99
-  Per user, billed monthly
-  Robust work management
-  100 gb storage
-  VIP support
-  Try for Free
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page
+  Coming 4 Nov 2020 -->
 
   <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-  Get Started
+
 </body>
 </html>

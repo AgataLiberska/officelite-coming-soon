@@ -1,0 +1,37 @@
+.btn{
+    display: inline-block;
+    height: 3.5rem;
+    width: 10.75rem;
+    border-radius: 1.75rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 3.5rem;
+    transition: all 200ms ease-in-out;
+}
+
+.btn--cta {
+    color: white;
+    background-color: $blue;
+
+    &:hover {
+        background-color: $medBlue;
+    }
+}
+
+.btn--blue {
+    color: $blue;
+    background-color: $veryLightBlue;
+
+    &:hover {
+        background-color: $lightBlue;
+    }
+}
+
+.btn--white {
+    color: $blue;
+    background-color: white;
+
+    &:hover {
+        color: $medBlue;
+    }
+}
