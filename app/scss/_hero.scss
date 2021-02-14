@@ -8,6 +8,10 @@
         align-items: flex-start;
         margin-bottom: 8.75rem;
     }
+
+    @include breakpoint-up(xlarge) {
+        margin-bottom: 10rem;
+    }
 }
 
 .hero__image {
@@ -35,6 +39,10 @@
     @include breakpoint-up(large) {
         height: 28rem;
     }
+
+    @include breakpoint-up(xlarge) {
+        height: 33rem;
+    }
 }
 
 .hero__content {
@@ -43,6 +51,10 @@
         flex: 1;
         order: 1;
         text-align: left;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding-top: 3.75rem;
     }
 }
 
@@ -59,6 +71,11 @@
         line-height: 3.5rem;
     }
 
+    @include breakpoint-up(xlarge) {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
 
 }
 
@@ -72,5 +89,6 @@
     @include breakpoint-up(large) {
         font-size: 1.25rem;
         padding-right: 1rem;
+        padding-bottom: 2rem;
     }
 }
