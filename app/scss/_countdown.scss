@@ -49,6 +49,10 @@
     background-color: $darkGray;
     border-radius: 0.25rem;
 
+    @include breakpoint-up(medium) {
+        max-width: 6.25rem;
+        border-radius: 0.75rem;
+    }
 }
 
 .countdown__clock__card__number {
@@ -59,6 +63,11 @@
     line-height: 3rem;
     font-weight: 700;
     color: white;
+
+    @include breakpoint-up(medium) {
+        padding-top: 2rem;
+        font-size: 3.5rem;
+    }
 }
 
 .countdown__clock__card__text {
@@ -69,4 +78,8 @@
     font-weight: 700;
     color: $white;
     opacity: 0.5;
+
+    @include breakpoint-up(medium) {
+        font-size: 1rem;
+    }
 }
