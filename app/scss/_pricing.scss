@@ -6,6 +6,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
     }
+
+    @include breakpoint-up(xlarge) {
+        gap: 1.75rem;
+        margin-bottom: 5.5rem;
+    }
 }
 
 .pricing__card {
@@ -58,7 +63,6 @@
 
     @include breakpoint-between(medium, large) {
         grid-area: info;
-        
     }
 }
 

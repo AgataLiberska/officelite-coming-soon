@@ -2,6 +2,16 @@
     position: relative;
     padding-bottom: 6.25rem;
     text-align: center;
+
+    @include breakpoint-up(xlarge) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3rem auto;
+        grid-template-areas: 
+            "countdown-text ."
+            "countdown-clock countdown-button"; 
+        justify-content: start;
+    }
 }
 
 .countdown::after {
@@ -15,6 +25,7 @@
     background-image: url('/assets/home/bg-pattern-footer.svg');
     background-size: cover;
     background-position: center 12.25rem;
+    background-repeat: no-repeat;
     z-index: -1;
 
     @include breakpoint-up(medium) {
@@ -24,7 +35,11 @@
     @include breakpoint-up(large) {
         height: 47rem;
         background-position: center -9.75rem;
+    }
 
+    @include breakpoint-up(xlarge) {
+        height: 41rem;
+        background-position: -25rem -17rem;
     }
 }
 
@@ -36,6 +51,11 @@
     line-height: 3rem;
     color: white;
     letter-spacing: 0.3125rem;
+
+    @include breakpoint-up(xlarge) {
+        grid-area: countdown-text;
+        text-align: left;
+    }
 }
 
 .countdown__date {
@@ -49,6 +69,11 @@
     margin: auto;
     padding-bottom: 2.5rem;
     max-width: 28rem;
+
+    @include breakpoint-up(xlarge) {
+        grid-area: countdown-clock;
+        margin: 0;
+    }
 }
 
 .countdown__clock__card {
@@ -87,5 +112,12 @@
 
     @include breakpoint-up(medium) {
         font-size: 1rem;
+    }
+}
+
+.countdown__clock__link {
+    @include breakpoint-up(xlarge) {
+        grid-area: countdown-button;
+        justify-self: end;
     }
 }

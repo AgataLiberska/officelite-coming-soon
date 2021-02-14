@@ -278,6 +278,13 @@ a, a:hover, a:visited {
   }
 }
 
+@media (min-width: 90rem) {
+  .pricing {
+    gap: 1.75rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
 .pricing__card {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -399,6 +406,21 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
+@media (min-width: 90rem) {
+  .countdown {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 3rem auto;
+        grid-template-rows: 3rem auto;
+        grid-template-areas: "countdown-text ." "countdown-clock countdown-button";
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 .countdown::after {
   content: "";
   position: absolute;
@@ -410,6 +432,7 @@ a, a:hover, a:visited {
   background-image: url("/assets/home/bg-pattern-footer.svg");
   background-size: cover;
   background-position: center 12.25rem;
+  background-repeat: no-repeat;
   z-index: -1;
 }
 
@@ -426,6 +449,13 @@ a, a:hover, a:visited {
   }
 }
 
+@media (min-width: 90rem) {
+  .countdown::after {
+    height: 41rem;
+    background-position: -25rem -17rem;
+  }
+}
+
 .countdown__text {
   display: block;
   padding-bottom: 1.125rem;
@@ -434,6 +464,13 @@ a, a:hover, a:visited {
   line-height: 3rem;
   color: white;
   letter-spacing: 0.3125rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown__text {
+    grid-area: countdown-text;
+    text-align: left;
+  }
 }
 
 .countdown__date {
@@ -449,6 +486,13 @@ a, a:hover, a:visited {
   margin: auto;
   padding-bottom: 2.5rem;
   max-width: 28rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown__clock {
+    grid-area: countdown-clock;
+    margin: 0;
+  }
 }
 
 .countdown__clock__card {
@@ -493,6 +537,14 @@ a, a:hover, a:visited {
 @media (min-width: 48rem) {
   .countdown__clock__card__text {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .countdown__clock__link {
+    grid-area: countdown-button;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 /*# sourceMappingURL=style.css.map */
