@@ -18,19 +18,22 @@
     @include breakpoint-up(medium) {
         flex: 1;
         order: 2;
-        height: 19.5rem;
         padding-bottom: 0;
         text-align: right;
     }
 }
 
 .hero__image__img {
-    height: 114%;
+    height: 14rem;
     width: auto;
     object-fit: contain;
 
     @include breakpoint-up(medium) {
-        max-height: 112%;
+        height: 23rem;
+    }
+
+    @include breakpoint-up(large) {
+        height: 28rem;
     }
 }
 
@@ -50,6 +53,13 @@
     line-height: 3rem;
     font-weight: 700;
     color: $veryDarkGray;
+
+    @include breakpoint-up(large) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+
 }
 
 .hero__content__tagline {
@@ -58,4 +68,9 @@
     font-size: 1rem;
     line-height: 1.625rem;
     color: $darkGray;
+
+    @include breakpoint-up(large) {
+        font-size: 1.25rem;
+        padding-right: 1rem;
+    }
 }
