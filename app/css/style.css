@@ -102,7 +102,92 @@ a, a:hover, a:visited {
   }
 }
 
-.header--homepage::before {
+.countdown-clock__heading {
+  display: block;
+  padding-bottom: 1.125rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 3rem;
+  color: white;
+  letter-spacing: 0.3125rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown-clock__heading {
+    grid-area: countdown-text;
+    text-align: left;
+    padding-bottom: 0;
+  }
+}
+
+.countdown-clock__date {
+  color: #5175ff;
+}
+
+.countdown-clock__timer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(3.5rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+  gap: 0.75rem;
+  margin: auto;
+  padding-bottom: 2.5rem;
+  max-width: 28rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown-clock__timer {
+    grid-area: countdown-timer;
+    margin: 0;
+  }
+}
+
+.countdown-clock__timer__card {
+  background-color: #333950;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 48rem) {
+  .countdown-clock__timer__card {
+    max-width: 6.25rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.countdown-clock__timer__card__number {
+  display: block;
+  padding: 0.75rem 1rem 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+@media (min-width: 48rem) {
+  .countdown-clock__timer__card__number {
+    padding-top: 2rem;
+    font-size: 3.5rem;
+  }
+}
+
+.countdown-clock__timer__card__text {
+  display: block;
+  padding-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: white;
+  opacity: 0.5;
+}
+
+@media (min-width: 48rem) {
+  .countdown-clock__timer__card__text {
+    font-size: 1rem;
+  }
+}
+
+.header_homepage::before {
   content: "";
   position: absolute;
   top: 0;
@@ -116,7 +201,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .header--homepage::before {
+  .header_homepage::before {
     height: 502px;
     background-size: 666px;
     background-position: 373px -164px;
@@ -124,7 +209,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 64rem) {
-  .header--homepage::before {
+  .header_homepage::before {
     height: 715px;
     background-size: 1134px;
     background-position: 480px -464px;
@@ -132,7 +217,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 90rem) {
-  .header--homepage::before {
+  .header_homepage::before {
     background-position: 661px -419px;
   }
 }
@@ -400,28 +485,28 @@ a, a:hover, a:visited {
   }
 }
 
-.countdown {
+.home-countdown {
   position: relative;
   padding-bottom: 6.25rem;
   text-align: center;
 }
 
 @media (min-width: 90rem) {
-  .countdown {
+  .home-countdown {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 3rem auto;
-        grid-template-rows: 3rem auto;
-        grid-template-areas: "countdown-text ." "countdown-clock countdown-button";
+    -ms-grid-rows: 3rem 7.5rem;
+        grid-template-rows: 3rem 7.5rem;
+        grid-template-areas: "countdown-text ." "countdown-timer countdown-button";
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
 }
 
-.countdown::after {
+.home-countdown::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -437,112 +522,27 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .countdown::after {
+  .home-countdown::after {
     height: 60rem;
   }
 }
 
 @media (min-width: 64rem) {
-  .countdown::after {
+  .home-countdown::after {
     height: 47rem;
     background-position: center -9.75rem;
   }
 }
 
 @media (min-width: 90rem) {
-  .countdown::after {
+  .home-countdown::after {
     height: 41rem;
     background-position: -25rem -17rem;
   }
 }
 
-.countdown__text {
-  display: block;
-  padding-bottom: 1.125rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-  line-height: 3rem;
-  color: white;
-  letter-spacing: 0.3125rem;
-}
-
 @media (min-width: 90rem) {
-  .countdown__text {
-    grid-area: countdown-text;
-    text-align: left;
-    padding-bottom: 0;
-  }
-}
-
-.countdown__date {
-  color: #5175ff;
-}
-
-.countdown__clock {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(3.5rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
-  gap: 0.75rem;
-  margin: auto;
-  padding-bottom: 2.5rem;
-  max-width: 28rem;
-}
-
-@media (min-width: 90rem) {
-  .countdown__clock {
-    grid-area: countdown-clock;
-    margin: 0;
-  }
-}
-
-.countdown__clock__card {
-  background-color: #333950;
-  border-radius: 0.25rem;
-}
-
-@media (min-width: 48rem) {
-  .countdown__clock__card {
-    max-width: 6.25rem;
-    border-radius: 0.75rem;
-  }
-}
-
-.countdown__clock__card__number {
-  display: block;
-  padding: 0.75rem 1rem 0 1rem;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 3rem;
-  font-weight: 700;
-  color: white;
-}
-
-@media (min-width: 48rem) {
-  .countdown__clock__card__number {
-    padding-top: 2rem;
-    font-size: 3.5rem;
-  }
-}
-
-.countdown__clock__card__text {
-  display: block;
-  padding-bottom: 0.75rem;
-  font-size: 0.75rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  color: white;
-  opacity: 0.5;
-}
-
-@media (min-width: 48rem) {
-  .countdown__clock__card__text {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  .countdown__clock__link {
+  .home-countdown__button {
     grid-area: countdown-button;
     -ms-grid-column-align: end;
         justify-self: end;

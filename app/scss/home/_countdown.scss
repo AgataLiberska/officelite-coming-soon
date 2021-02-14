@@ -1,4 +1,4 @@
-.countdown {
+.home-countdown {
     position: relative;
     padding-bottom: 6.25rem;
     text-align: center;
@@ -6,15 +6,15 @@
     @include breakpoint-up(xlarge) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 3rem auto;
+        grid-template-rows: 3rem 7.5rem;
         grid-template-areas: 
             "countdown-text ."
-            "countdown-clock countdown-button"; 
+            "countdown-timer countdown-button"; 
         justify-content: start;
     }
 }
 
-.countdown::after {
+.home-countdown::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -43,80 +43,7 @@
     }
 }
 
-.countdown__text {
-    display: block;
-    padding-bottom: 1.125rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 3rem;
-    color: white;
-    letter-spacing: 0.3125rem;
-
-    @include breakpoint-up(xlarge) {
-        grid-area: countdown-text;
-        text-align: left;
-        padding-bottom: 0;
-    }
-}
-
-.countdown__date {
-    color: $blue;
-}
-
-.countdown__clock {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
-    gap: 0.75rem;
-    margin: auto;
-    padding-bottom: 2.5rem;
-    max-width: 28rem;
-
-    @include breakpoint-up(xlarge) {
-        grid-area: countdown-clock;
-        margin: 0;
-    }
-}
-
-.countdown__clock__card {
-    background-color: $darkGray;
-    border-radius: 0.25rem;
-
-    @include breakpoint-up(medium) {
-        max-width: 6.25rem;
-        border-radius: 0.75rem;
-    }
-}
-
-.countdown__clock__card__number {
-    display: block;
-    padding: 0.75rem 1rem 0 1rem;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 3rem;
-    font-weight: 700;
-    color: white;
-
-    @include breakpoint-up(medium) {
-        padding-top: 2rem;
-        font-size: 3.5rem;
-    }
-}
-
-.countdown__clock__card__text {
-    display: block;
-    padding-bottom: 0.75rem;
-    font-size: 0.75rem;
-    line-height: 1.75rem;
-    font-weight: 700;
-    color: $white;
-    opacity: 0.5;
-
-    @include breakpoint-up(medium) {
-        font-size: 1rem;
-    }
-}
-
-.countdown__clock__link {
+.home-countdown__button {
     @include breakpoint-up(xlarge) {
         grid-area: countdown-button;
         justify-self: end;
