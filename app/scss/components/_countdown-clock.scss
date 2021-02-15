@@ -11,7 +11,7 @@
     line-height: 3rem;
     letter-spacing: 0.3125rem;
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         text-align: left;
     }
 }
@@ -36,7 +36,7 @@
     padding-bottom: 2.5rem;
     max-width: 28rem;
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         margin: 0;
     }
 }

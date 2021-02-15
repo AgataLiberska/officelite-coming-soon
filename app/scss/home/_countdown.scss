@@ -3,7 +3,7 @@
     padding-bottom: 6.25rem;
     text-align: center;
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 3rem 7.5rem;
@@ -44,20 +44,20 @@
 }
 
 .home-countdown__heading {
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         grid-area: countdown-heading;
         padding-bottom: 0;
     }
 }
 
 .home-countdown__timer {
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         grid-area: countdown-timer;
     }
 }
 
 .home-countdown__button {
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         grid-area: countdown-button;
         justify-self: end;
     }

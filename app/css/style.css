@@ -112,7 +112,7 @@ a, a:hover, a:visited {
   letter-spacing: 0.3125rem;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .countdown-clock__heading {
     text-align: left;
   }
@@ -141,7 +141,7 @@ a, a:hover, a:visited {
   max-width: 28rem;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .countdown-clock__timer {
     margin: 0;
   }
@@ -518,7 +518,7 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .home-countdown {
     display: -ms-grid;
     display: grid;
@@ -568,20 +568,20 @@ a, a:hover, a:visited {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .home-countdown__heading {
     grid-area: countdown-heading;
     padding-bottom: 0;
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .home-countdown__timer {
     grid-area: countdown-timer;
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .home-countdown__button {
     grid-area: countdown-button;
     -ms-grid-column-align: end;
@@ -620,7 +620,7 @@ a, a:hover, a:visited {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 90rem) {
   .signup__intro {
     margin-bottom: 0;
     text-align: left;
