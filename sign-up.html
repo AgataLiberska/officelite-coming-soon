@@ -61,20 +61,16 @@
       </div>
     </div>
     <div class="signup__form">
-      <form action="">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name">
-        <label for="email">Email Address</label>
-        <input id="email" type="email" name="email">
+      <form action="" class="form">
+        <input type="text" name="name" aria-label="Name" class="form__control" placeholder="Name">
+        <input type="email" name="email" aria-label="Email" class="form__control" placeholder="Email">
         <select name="plan" id="plan">
           <option value="basic" selected>Basic Pack Free</option>
           <option value="pro">Pro Pack $9.99</option>
           <option value="ultimate">Ultimate Pack $19.99</option>
         </select>
-        <label for="telNo">Phone Number</label>
-        <input id="telNo" type="tel" name="telNo">
-        <label for="company">Company</label>
-        <input id="company" type="text" name="company">
+        <input type="tel" name="telNo" aria-label="Phone number" class="form__control" placeholder="Phone number">
+        <input type="text" name="company" aria-label="Company" class="form__control" placeholder="Company">
         <button>Get on the list</button>
       </form>
     </div>
