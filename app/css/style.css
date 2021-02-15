@@ -112,11 +112,9 @@ a, a:hover, a:visited {
   letter-spacing: 0.3125rem;
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 64rem) {
   .countdown-clock__heading {
-    grid-area: countdown-text;
     text-align: left;
-    padding-bottom: 0;
   }
 }
 
@@ -143,9 +141,8 @@ a, a:hover, a:visited {
   max-width: 28rem;
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 64rem) {
   .countdown-clock__timer {
-    grid-area: countdown-timer;
     margin: 0;
   }
 }
@@ -521,7 +518,7 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 64rem) {
   .home-countdown {
     display: -ms-grid;
     display: grid;
@@ -529,7 +526,7 @@ a, a:hover, a:visited {
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 3rem 7.5rem;
         grid-template-rows: 3rem 7.5rem;
-        grid-template-areas: "countdown-text ." "countdown-timer countdown-button";
+        grid-template-areas: "countdown-heading ." "countdown-timer countdown-button";
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -571,7 +568,20 @@ a, a:hover, a:visited {
   }
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 64rem) {
+  .home-countdown__heading {
+    grid-area: countdown-heading;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-countdown__timer {
+    grid-area: countdown-timer;
+  }
+}
+
+@media (min-width: 64rem) {
   .home-countdown__button {
     grid-area: countdown-button;
     -ms-grid-column-align: end;
@@ -612,7 +622,7 @@ a, a:hover, a:visited {
 
 @media (min-width: 64rem) {
   .signup__intro {
-    magin-bottom: 0;
+    margin-bottom: 0;
     text-align: left;
   }
 }

@@ -11,10 +11,8 @@
     line-height: 3rem;
     letter-spacing: 0.3125rem;
 
-    @include breakpoint-up(xlarge) {
-        grid-area: countdown-text;
+    @include breakpoint-up(large) {
         text-align: left;
-        padding-bottom: 0;
     }
 }
 
@@ -38,8 +36,7 @@
     padding-bottom: 2.5rem;
     max-width: 28rem;
 
-    @include breakpoint-up(xlarge) {
-        grid-area: countdown-timer;
+    @include breakpoint-up(large) {
         margin: 0;
     }
 }
