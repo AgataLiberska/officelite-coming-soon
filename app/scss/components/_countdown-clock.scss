@@ -1,14 +1,14 @@
-.countdown-clock {
-    text-align: center;
-}
+// .countdown-clock {
+
+// }
 
 .countdown-clock__heading {
     display: block;
     padding-bottom: 1.125rem;
     text-transform: uppercase;
     font-size: 1rem;
+    font-weight: 700;
     line-height: 3rem;
-    color: white;
     letter-spacing: 0.3125rem;
 
     @include breakpoint-up(xlarge) {
@@ -16,6 +16,14 @@
         text-align: left;
         padding-bottom: 0;
     }
+}
+
+.countdown-clock_gray__heading {
+    color:$white;
+}
+
+.countdown-clock_blue__heading {
+    color: $darkGray;
 }
 
 .countdown-clock__date {
@@ -37,13 +45,22 @@
 }
 
 .countdown-clock__timer__card {
-    background-color: $darkGray;
+
     border-radius: 0.25rem;
+    text-align: center;
 
     @include breakpoint-up(medium) {
         max-width: 6.25rem;
         border-radius: 0.75rem;
     }
+}
+
+.countdown-clock_gray__timer__card {
+    background-color: $darkGray;
+}
+
+.countdown-clock_blue__timer__card {
+    background-color: $veryLightBlue;
 }
 
 .countdown-clock__timer__card__number {
@@ -53,12 +70,19 @@
     font-size: 2rem;
     line-height: 3rem;
     font-weight: 700;
-    color: white;
 
     @include breakpoint-up(medium) {
         padding-top: 2rem;
         font-size: 3.5rem;
     }
+}
+
+.countdown-clock_gray__timer__card__number {
+    color:$white;
+}
+
+.countdown-clock_blue__timer__card__number {
+    color: $blue;
 }
 
 .countdown-clock__timer__card__text {
@@ -67,10 +91,17 @@
     font-size: 0.75rem;
     line-height: 1.75rem;
     font-weight: 700;
-    color: $white;
     opacity: 0.5;
 
     @include breakpoint-up(medium) {
         font-size: 1rem;
     }
+}
+
+.countdown-clock_gray__timer__card__text {
+    color: $white;
+}
+
+.countdown-clock_blue__timer__card__text {
+    color: $darkGray;                 
 }
