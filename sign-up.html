@@ -13,29 +13,71 @@
 <body>
   <header class="header header_signup container">
     <img src="/assets/shared/logo.svg" alt="Officelite logo">
-</header>
-  Work smarter. Save time.
-
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
+  </header>
+  <section class="signup container">
+    <div class="signup__intro">
+      <div class="signup__intro__copy">
+        <h1 class="signup__intro__copy__heading">Work smarter. Save time.</h1>
+        <span class="signup__intro__copy__tagline">
+          Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We are moving into final development and getting ready for official launch soon.
+        </span>
+      </div>
+      <div class="countdown-clock">
+        <span class="countdown-clock__heading">Coming <span class="countdown-clock__date">4 Nov 2020</span></span>
+        <div class="countdown-clock__timer">
+          <div class="countdown-clock__timer__card">
+            <span class="countdown-clock__timer__card__number countdown-clock_days">
+              47
+            </span>
+            <span class="countdown-clock__timer__card__text">
+              days
+            </span>
+          </div>
+          <div class="countdown-clock__timer__card">
+            <span class="countdown-clock__timer__card__number countdown-clock_hours">
+              07
+            </span>
+            <span class="countdown-clock__timer__card__text">
+              hours
+            </span>
+          </div>
+          <div class="countdown-clock__timer__card">
+            <span class="countdown-clock__timer__card__number countdown-clock_minutes">
+              56
+            </span>
+            <span class="countdown-clock__timer__card__text">
+              min
+            </span>
+          </div>
+          <div class="countdown-clock__timer__card">
+            <span class="countdown-clock__timer__card__number countdown-clock_seconds">
+              14
+            </span>
+            <span class="countdown-clock__timer__card__text">
+              sec
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="signup__form">
+      <form action="">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+        <label for="email">Email Address</label>
+        <input id="email" type="email" name="email">
+        <select name="plan" id="plan">
+          <option value="basic" selected>Basic Pack Free</option>
+          <option value="pro">Pro Pack $9.99</option>
+          <option value="ultimate">Ultimate Pack $19.99</option>
+        </select>
+        <label for="telNo">Phone Number</label>
+        <input id="telNo" type="tel" name="telNo">
+        <label for="company">Company</label>
+        <input id="company" type="text" name="company">
+        <button>Get on the list</button>
+      </form>
+    </div>
+  </section> 
 </body>
 </html>
