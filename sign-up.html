@@ -64,14 +64,16 @@
       <form action="" class="form">
         <input type="text" name="name" aria-label="Name" class="form__control" placeholder="Name">
         <input type="email" name="email" aria-label="Email" class="form__control" placeholder="Email">
-        <select name="plan" id="plan">
+        <input type="text" name="plan" aria-label="Choose plan" class="form__control form__control_custom-select" placeholder="Select plan">
+        <img src="/assets/sign-up/icon-arrow-down.svg" alt="" class="form__control_custom-select__toggle">
+        <!-- <select name="plan" id="plan">
           <option value="basic" selected>Basic Pack Free</option>
           <option value="pro">Pro Pack $9.99</option>
           <option value="ultimate">Ultimate Pack $19.99</option>
-        </select>
+        </select> -->
         <input type="tel" name="telNo" aria-label="Phone number" class="form__control" placeholder="Phone number">
         <input type="text" name="company" aria-label="Company" class="form__control" placeholder="Company">
-        <button>Get on the list</button>
+        <button class="btn form__submit">Get on the list</button>
       </form>
     </div>
   </section> 
