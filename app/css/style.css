@@ -102,6 +102,10 @@ a, a:hover, a:visited {
   }
 }
 
+.countdown-clock {
+  text-align: center;
+}
+
 .countdown-clock__heading {
   display: block;
   padding-bottom: 1.125rem;
@@ -547,5 +551,29 @@ a, a:hover, a:visited {
     -ms-grid-column-align: end;
         justify-self: end;
   }
+}
+
+.header_signup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 288px;
+  background-image: url("/assets/home/bg-pattern-header.svg");
+  background-size: 458px;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .header_signup::before {
+    display: none;
+  }
+}
+
+.signup__intro {
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */
