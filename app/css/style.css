@@ -2,6 +2,80 @@
   display: none;
 }
 
+.toggleable {
+  visibility: hidden;
+}
+
+.toggleable:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes toggle-fadein {
+  from {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes toggle-fadein {
+  from {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.open-toggle {
+  -webkit-animation: toggle-fadein 200ms ease-in-out forwards;
+          animation: toggle-fadein 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes toggle-fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes toggle-fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+.close-toggle {
+  -webkit-animation: toggle-fadeout 200ms ease-in forwards;
+          animation: toggle-fadeout 200ms ease-in forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -266,7 +340,7 @@ a, a:hover, a:visited {
   position: relative;
 }
 
-.form__control_custom-select__toggle {
+.form__control_custom-select__toggle__icon {
   position: absolute;
   right: 1.5rem;
   top: 1.75rem;
