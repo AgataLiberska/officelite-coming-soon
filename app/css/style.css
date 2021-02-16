@@ -340,10 +340,26 @@ a, a:hover, a:visited {
   position: relative;
 }
 
+.form__control_custom-select__toggle {
+  cursor: pointer;
+}
+
 .form__control_custom-select__toggle__icon {
   position: absolute;
-  right: 1.5rem;
-  top: 1.75rem;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  padding: 1rem;
+  line-height: 1.75rem;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.form__control_custom-select__toggle__icon.is-open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .form__control_custom-select__options {
