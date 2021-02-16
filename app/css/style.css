@@ -54,6 +54,7 @@
   }
   to {
     visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -68,6 +69,7 @@
   }
   to {
     visibility: hidden;
+    opacity: 0;
   }
 }
 
