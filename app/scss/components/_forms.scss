@@ -12,8 +12,8 @@
     appearance: none;
     width: 100%;
     height: 2.75rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0 1rem 1rem;
     border: 0;
     border-bottom: 1px solid $grayHalfOpacity;
     border-radius: 0;
@@ -21,15 +21,7 @@
     font-size: 1rem;
     line-height: 1.75rem;
     color: $darkGray;
-    //opacity: 0.5;
-    
-    &:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
 
-    &:last-of-type {
-        margin-bottom: 2.5rem;
-    }
 }
 
 .form__control::placeholder {
@@ -39,14 +31,18 @@
 
 .form__control_custom-select {
     position: relative;
+    margin-bottom: 1.5rem;
 }
 
 .form__control_custom-select__toggle {
     position: absolute;
+    right: 1.5rem;
+    top: 0.75rem;
 }
 
 .form__submit {
     width: 100%;
+    margin-top: 1rem;
     border: none;
     background-color: $blue;
     font-family: inherit;
