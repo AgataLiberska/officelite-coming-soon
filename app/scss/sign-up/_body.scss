@@ -1,0 +1,39 @@
+.body--signup{
+    position: relative;
+
+    @include breakpoint-up(xlarge) {
+        background-color: $white;
+    }
+    
+}
+
+.body--signup::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    background-color: $veryDarkGray;
+    background-image: url('/assets/sign-up/bg-pattern-side.svg');
+    background-size: 75rem;
+    background-repeat: no-repeat;
+    background-position: center -25.25rem;
+    z-index: -1;
+
+    @include breakpoint-up(medium) {
+        background-size: 91rem;
+        background-position: center -33rem;
+    }
+
+    @include breakpoint-up(xlarge){
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        height: unset;
+        width: 26.25rem;
+        background-size: 127rem;
+        background-position: -47rem -50rem;
+    }
+}

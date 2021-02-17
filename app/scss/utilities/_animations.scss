@@ -1,0 +1,49 @@
+.toggleable {
+    visibility: hidden;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@keyframes toggle-fadein {
+
+    from {
+        visibility: hidden;
+    }
+    
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.open-dropdown {
+    animation: toggle-fadein 200ms ease-in-out forwards;
+}
+
+@keyframes toggle-fadeout {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.close-dropdown {
+    animation: toggle-fadeout 200ms ease-in forwards;
+}

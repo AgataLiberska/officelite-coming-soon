@@ -1,3 +1,83 @@
+.hidden {
+  display: none;
+}
+
+.toggleable {
+  visibility: hidden;
+}
+
+.toggleable:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes toggle-fadein {
+  from {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes toggle-fadein {
+  from {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.open-dropdown {
+  -webkit-animation: toggle-fadein 200ms ease-in-out forwards;
+          animation: toggle-fadein 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes toggle-fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes toggle-fadeout {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.close-dropdown {
+  -webkit-animation: toggle-fadeout 200ms ease-in forwards;
+          animation: toggle-fadeout 200ms ease-in forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -102,7 +182,252 @@ a, a:hover, a:visited {
   }
 }
 
-.header::before {
+.countdown-clock__heading {
+  display: block;
+  padding-bottom: 1.125rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: 0.3125rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown-clock__heading {
+    text-align: left;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.countdown-clock_gray__heading {
+  color: white;
+}
+
+.countdown-clock_blue__heading {
+  color: #333950;
+}
+
+.countdown-clock__date {
+  color: #5175ff;
+}
+
+.countdown-clock__timer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(3.5rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+  gap: 0.75rem;
+  margin: auto;
+  padding-bottom: 2.5rem;
+  max-width: 28rem;
+}
+
+@media (min-width: 90rem) {
+  .countdown-clock__timer {
+    margin: 0;
+  }
+}
+
+.countdown-clock__timer__card {
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .countdown-clock__timer__card {
+    max-width: 6.25rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.countdown-clock_gray__timer__card {
+  background-color: #333950;
+}
+
+.countdown-clock_blue__timer__card {
+  background-color: rgba(81, 117, 255, 0.15);
+}
+
+.countdown-clock__timer__card__number {
+  display: block;
+  padding: 0.75rem 1rem 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+  .countdown-clock__timer__card__number {
+    padding-top: 2rem;
+    font-size: 3.5rem;
+  }
+}
+
+.countdown-clock_gray__timer__card__number {
+  color: white;
+}
+
+.countdown-clock_blue__timer__card__number {
+  color: #5175ff;
+}
+
+.countdown-clock__timer__card__text {
+  display: block;
+  padding-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+@media (min-width: 48rem) {
+  .countdown-clock__timer__card__text {
+    font-size: 1rem;
+  }
+}
+
+.countdown-clock_gray__timer__card__text {
+  color: white;
+}
+
+.countdown-clock_blue__timer__card__text {
+  color: #333950;
+}
+
+.form {
+  max-width: 27.75rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: white;
+}
+
+@media (min-width: 90rem) {
+  .form {
+    margin: 0;
+    padding: 2.5rem;
+  }
+}
+
+.form__control {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 0;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.5);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #333950;
+}
+
+.form__control::-webkit-input-placeholder {
+  color: #747b95;
+  opacity: 0.5;
+}
+
+.form__control:-ms-input-placeholder {
+  color: #747b95;
+  opacity: 0.5;
+}
+
+.form__control::-ms-input-placeholder {
+  color: #747b95;
+  opacity: 0.5;
+}
+
+.form__control::placeholder {
+  color: #747b95;
+  opacity: 0.5;
+}
+
+.form__control_custom-select {
+  position: relative;
+}
+
+.form__control_custom-select__input {
+  cursor: pointer;
+}
+
+.form__control_custom-select__toggle__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  padding: 1rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.form__control_custom-select__toggle__icon.is-open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.form__control_custom-select__dropdown {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.5rem 2rem;
+  background-color: white;
+  border: 1px solid rgba(51, 57, 80, 0.15);
+  border-radius: 0.5rem;
+  list-style: none;
+  -webkit-box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747);
+          box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.747);
+  z-index: 10;
+}
+
+.form__control_custom-select__item {
+  position: relative;
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.form__control_custom-select__item:not(:last-child) {
+  border-bottom: 1px solid rgba(51, 57, 80, 0.15);
+}
+
+.form__control_custom-select__item.selected::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url("/assets/sign-up/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center right 0.25rem;
+}
+
+.form__submit {
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #5175ff;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: white;
+}
+
+.form__submit:hover {
+  background-color: #829cff;
+}
+
+.header_homepage::before {
   content: "";
   position: absolute;
   top: 0;
@@ -116,7 +441,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .header::before {
+  .header_homepage::before {
     height: 502px;
     background-size: 666px;
     background-position: 373px -164px;
@@ -124,7 +449,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 64rem) {
-  .header::before {
+  .header_homepage::before {
     height: 715px;
     background-size: 1134px;
     background-position: 480px -464px;
@@ -132,7 +457,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 90rem) {
-  .header::before {
+  .header_homepage::before {
     background-position: 661px -419px;
   }
 }
@@ -400,28 +725,28 @@ a, a:hover, a:visited {
   }
 }
 
-.countdown {
+.home-countdown {
   position: relative;
   padding-bottom: 6.25rem;
   text-align: center;
 }
 
 @media (min-width: 90rem) {
-  .countdown {
+  .home-countdown {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 3rem auto;
-        grid-template-rows: 3rem auto;
-        grid-template-areas: "countdown-text ." "countdown-clock countdown-button";
+    -ms-grid-rows: 3rem 7.5rem;
+        grid-template-rows: 3rem 7.5rem;
+        grid-template-areas: "countdown-heading ." "countdown-timer countdown-button";
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
 }
 
-.countdown::after {
+.home-countdown::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -437,114 +762,267 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .countdown::after {
+  .home-countdown::after {
     height: 60rem;
   }
 }
 
 @media (min-width: 64rem) {
-  .countdown::after {
+  .home-countdown::after {
     height: 47rem;
     background-position: center -9.75rem;
   }
 }
 
 @media (min-width: 90rem) {
-  .countdown::after {
+  .home-countdown::after {
     height: 41rem;
     background-position: -25rem -17rem;
   }
 }
 
-.countdown__text {
-  display: block;
-  padding-bottom: 1.125rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-  line-height: 3rem;
-  color: white;
-  letter-spacing: 0.3125rem;
-}
-
 @media (min-width: 90rem) {
-  .countdown__text {
-    grid-area: countdown-text;
-    text-align: left;
-  }
-}
-
-.countdown__date {
-  color: #5175ff;
-}
-
-.countdown__clock {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(3.5rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
-  gap: 0.75rem;
-  margin: auto;
-  padding-bottom: 2.5rem;
-  max-width: 28rem;
-}
-
-@media (min-width: 90rem) {
-  .countdown__clock {
-    grid-area: countdown-clock;
-    margin: 0;
-  }
-}
-
-.countdown__clock__card {
-  background-color: #333950;
-  border-radius: 0.25rem;
-}
-
-@media (min-width: 48rem) {
-  .countdown__clock__card {
-    max-width: 6.25rem;
-    border-radius: 0.75rem;
-  }
-}
-
-.countdown__clock__card__number {
-  display: block;
-  padding: 0.75rem 1rem 0 1rem;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 3rem;
-  font-weight: 700;
-  color: white;
-}
-
-@media (min-width: 48rem) {
-  .countdown__clock__card__number {
-    padding-top: 2rem;
-    font-size: 3.5rem;
-  }
-}
-
-.countdown__clock__card__text {
-  display: block;
-  padding-bottom: 0.75rem;
-  font-size: 0.75rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  color: white;
-  opacity: 0.5;
-}
-
-@media (min-width: 48rem) {
-  .countdown__clock__card__text {
-    font-size: 1rem;
+  .home-countdown__heading {
+    grid-area: countdown-heading;
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: 90rem) {
-  .countdown__clock__link {
+  .home-countdown__timer {
+    grid-area: countdown-timer;
+  }
+}
+
+@media (min-width: 90rem) {
+  .home-countdown__button {
     grid-area: countdown-button;
     -ms-grid-column-align: end;
         justify-self: end;
   }
+}
+
+.header_signup {
+  max-width: 1580px;
+  margin: auto;
+}
+
+.header_signup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 288px;
+  background-image: url("/assets/home/bg-pattern-header.svg");
+  background-size: 458px;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .header_signup::before {
+    display: none;
+  }
+}
+
+.body--signup {
+  position: relative;
+}
+
+@media (min-width: 90rem) {
+  .body--signup {
+    background-color: white;
+  }
+}
+
+.body--signup::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20rem;
+  background-color: #25293a;
+  background-image: url("/assets/sign-up/bg-pattern-side.svg");
+  background-size: 75rem;
+  background-repeat: no-repeat;
+  background-position: center -25.25rem;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .body--signup::after {
+    background-size: 91rem;
+    background-position: center -33rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .body--signup::after {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    height: unset;
+    width: 26.25rem;
+    background-size: 127rem;
+    background-position: -47rem -50rem;
+  }
+}
+
+.signup {
+  position: relative;
+  max-width: 1580px;
+  margin: auto;
+}
+
+@media (min-width: 90rem) {
+  .signup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.signup__intro {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .signup__intro {
+    margin-bottom: 6.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .signup__intro {
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .signup__intro {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-bottom: 0;
+    padding: 0;
+    padding-right: 2.75rem;
+    text-align: left;
+  }
+}
+
+.signup__intro__copy {
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48rem) {
+  .signup__intro__copy {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .signup__intro__copy {
+    padding-top: 2.5rem;
+  }
+}
+
+.signup__intro__copy__heading {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #333950;
+}
+
+@media (min-width: 64rem) {
+  .signup__intro__copy__heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .signup__intro__copy__heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.signup__intro__copy__tagline {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #747b95;
+}
+
+@media (min-width: 64rem) {
+  .signup__intro__copy__tagline {
+    font-size: 1.25rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.signup__info {
+  padding-bottom: 5.5rem;
+}
+
+@media (min-width: 90rem) {
+  .signup__info {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+.signup__form {
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+          box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+}
+
+@media (min-width: 90rem) {
+  .signup__form {
+    margin-right: 0;
+  }
+}
+
+.signup__form__plan {
+  font-weight: 700;
+  color: #333950;
+}
+
+.signup__form__plan.basic::after {
+  content: 'Free';
+  padding-left: 0.5rem;
+  font-weight: 700;
+  color: rgba(116, 123, 149, 0.5);
+}
+
+.signup__form__plan.pro::after {
+  content: '$9.99';
+  padding-left: 0.5rem;
+  font-weight: 700;
+  color: rgba(116, 123, 149, 0.5);
+}
+
+.signup__form__plan.ultimate::after {
+  content: '$19.99';
+  padding-left: 0.5rem;
+  font-weight: 700;
+  color: rgba(116, 123, 149, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
