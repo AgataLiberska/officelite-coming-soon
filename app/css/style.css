@@ -815,6 +815,19 @@ a, a:hover, a:visited {
   }
 }
 
+.signup::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20rem;
+  background-color: #25293a;
+  background-image: url("/assets/sign-up/bg-pattern-side.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .signup__intro {
   margin-bottom: 4rem;
   text-align: center;
@@ -881,6 +894,10 @@ a, a:hover, a:visited {
     padding-right: 1rem;
     padding-bottom: 2rem;
   }
+}
+
+.signup__form {
+  position: relative;
 }
 
 .signup__form__plan {
