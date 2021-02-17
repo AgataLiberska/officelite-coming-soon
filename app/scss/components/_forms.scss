@@ -5,6 +5,10 @@
     border-radius: 0.75rem;
     background-color: $white;
     
+    @include breakpoint-up(xlarge) {
+        margin: 0;
+        padding: 2.5rem;
+    }
 }
 
 .form__control {

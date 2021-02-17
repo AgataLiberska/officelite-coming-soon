@@ -302,6 +302,13 @@ a, a:hover, a:visited {
   background-color: white;
 }
 
+@media (min-width: 90rem) {
+  .form {
+    margin: 0;
+    padding: 2.5rem;
+  }
+}
+
 .form__control {
   display: block;
   -webkit-appearance: none;
@@ -817,6 +824,12 @@ a, a:hover, a:visited {
 
 .signup {
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .signup::after {
@@ -834,6 +847,21 @@ a, a:hover, a:visited {
   z-index: -1;
 }
 
+@media (min-width: 48rem) {
+  .signup::after {
+    background-size: 91rem;
+    background-position: center -33rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .signup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .signup__intro {
   margin-bottom: 4rem;
   text-align: center;
@@ -845,9 +873,20 @@ a, a:hover, a:visited {
   }
 }
 
+@media (min-width: 64rem) {
+  .signup__intro {
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+  }
+}
+
 @media (min-width: 90rem) {
   .signup__intro {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
     margin-bottom: 0;
+    padding: 0;
     text-align: left;
   }
 }
@@ -859,12 +898,6 @@ a, a:hover, a:visited {
 @media (min-width: 48rem) {
   .signup__intro__copy {
     padding-bottom: 2.5rem;
-  }
-}
-
-@media (min-width: 64rem) {
-  .signup__intro__copy {
-    text-align: left;
   }
 }
 
@@ -903,8 +936,17 @@ a, a:hover, a:visited {
 }
 
 .signup__form {
-  position: relative;
   padding-bottom: 5.5rem;
+}
+
+@media (min-width: 90rem) {
+  .signup__form {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    margin-right: 0;
+    padding-bottom: 0;
+  }
 }
 
 .signup__form__plan {
