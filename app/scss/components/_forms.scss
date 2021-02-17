@@ -68,12 +68,27 @@
 }
 
 .form__control_custom-select__item {
+    position: relative;
     padding: 1rem 0;
     font-size: 1rem;
     line-height: 1.75rem;
 
     &:not(:last-child) {
         border-bottom: 1px solid $darkGrayLowOpacity;
+    }
+
+    &.selected {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-image: url('/assets/sign-up/icon-check.svg');
+            background-repeat: no-repeat;
+            background-position: center right 0.25rem;
+        }
     }
     
 }
