@@ -296,7 +296,7 @@ a, a:hover, a:visited {
 
 .form {
   max-width: 27.75rem;
-  margin: 0 auto 5.5rem auto;
+  margin: 0 auto;
   padding: 1.5rem;
   border-radius: 0.75rem;
   background-color: white;
@@ -815,6 +815,10 @@ a, a:hover, a:visited {
   }
 }
 
+.signup {
+  position: relative;
+}
+
 .signup::after {
   content: '';
   position: absolute;
@@ -824,8 +828,10 @@ a, a:hover, a:visited {
   height: 20rem;
   background-color: #25293a;
   background-image: url("/assets/sign-up/bg-pattern-side.svg");
+  background-size: 75rem;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center -25.25rem;
+  z-index: -1;
 }
 
 .signup__intro {
@@ -898,6 +904,7 @@ a, a:hover, a:visited {
 
 .signup__form {
   position: relative;
+  padding-bottom: 5.5rem;
 }
 
 .signup__form__plan {

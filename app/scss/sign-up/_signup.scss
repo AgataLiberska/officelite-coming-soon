@@ -1,4 +1,5 @@
 .signup {
+    position: relative;
     
     &::after {
         content: '';
@@ -9,8 +10,10 @@
         height: 20rem;
         background-color: $veryDarkGray;
         background-image: url('/assets/sign-up/bg-pattern-side.svg');
+        background-size: 75rem;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center -25.25rem;
+        z-index: -1;
     }
 }
 
@@ -70,6 +73,7 @@
 
 .signup__form {
     position: relative;
+    padding-bottom: 5.5rem;
 }
 
 .signup__form__plan {
