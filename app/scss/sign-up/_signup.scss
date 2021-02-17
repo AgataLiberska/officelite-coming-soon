@@ -1,5 +1,7 @@
 .signup {
     position: relative;
+    max-width: 1580px;
+    margin: auto;
     
     @include breakpoint-up(xlarge) {
         display: flex;

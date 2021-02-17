@@ -802,6 +802,11 @@ a, a:hover, a:visited {
   }
 }
 
+.header_signup {
+  max-width: 1580px;
+  margin: auto;
+}
+
 .header_signup::before {
   content: "";
   position: absolute;
@@ -862,11 +867,15 @@ a, a:hover, a:visited {
     left: auto;
     height: unset;
     width: 26.25rem;
+    background-size: 127rem;
+    background-position: -47rem -50rem;
   }
 }
 
 .signup {
   position: relative;
+  max-width: 1580px;
+  margin: auto;
 }
 
 @media (min-width: 90rem) {
