@@ -438,6 +438,7 @@ a, a:hover, a:visited {
   background-size: 458px;
   background-repeat: no-repeat;
   background-position: center -170px;
+  z-index: -1;
 }
 
 @media (min-width: 48rem) {
