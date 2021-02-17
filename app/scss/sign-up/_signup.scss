@@ -1,7 +1,6 @@
 .signup {
     position: relative;
-    justify-content: space-between;
-    align-items: center;
+    min-height: 100vh;
     
     &::after {
         content: '';
@@ -25,6 +24,8 @@
 
     @include breakpoint-up(xlarge) {
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 }
 
@@ -45,6 +46,7 @@
         flex: 50%;
         margin-bottom: 0;
         padding: 0;
+        padding-right: 2.75rem;
         text-align: left;
     }
 }
@@ -53,15 +55,17 @@
     padding-bottom: 4rem;
 
     @include breakpoint-up(medium) {
+        padding-top: 1.5rem;
         padding-bottom: 2.5rem;
     }
 
     @include breakpoint-up(xlarge) {
-        //text-align: left;
+        padding-top: 2.5rem;
     }
 }
 
 .signup__intro__copy__heading {
+    margin: 0;
     font-size: 2.5rem;
     line-height: 3rem;
     color: $darkGray;
@@ -89,13 +93,23 @@
     }
 }
 
-.signup__form {
+.signup__info {
     padding-bottom: 5.5rem;
 
     @include breakpoint-up(xlarge) {
         flex: 50%;
         margin-right: 0;
         padding-bottom: 0;
+    }
+}
+
+
+.signup__form {
+    margin: 0 auto; 
+    box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+
+    @include breakpoint-up(xlarge) {
+        margin-right: 0;
     }
 }
 

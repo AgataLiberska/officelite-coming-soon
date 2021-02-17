@@ -13,6 +13,7 @@
 
     @include breakpoint-up(xlarge) {
         text-align: left;
+        padding-bottom: 0.5rem;
     }
 }
 

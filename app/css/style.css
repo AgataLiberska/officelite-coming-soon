@@ -195,6 +195,7 @@ a, a:hover, a:visited {
 @media (min-width: 90rem) {
   .countdown-clock__heading {
     text-align: left;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -296,7 +297,6 @@ a, a:hover, a:visited {
 
 .form {
   max-width: 27.75rem;
-  margin: 0 auto;
   padding: 1.5rem;
   border-radius: 0.75rem;
   background-color: white;
@@ -822,14 +822,13 @@ a, a:hover, a:visited {
   }
 }
 
+.body--signup {
+  background-color: white;
+}
+
 .signup {
   position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  min-height: 100vh;
 }
 
 .signup::after {
@@ -859,6 +858,12 @@ a, a:hover, a:visited {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -887,6 +892,7 @@ a, a:hover, a:visited {
             flex: 50%;
     margin-bottom: 0;
     padding: 0;
+    padding-right: 2.75rem;
     text-align: left;
   }
 }
@@ -897,11 +903,19 @@ a, a:hover, a:visited {
 
 @media (min-width: 48rem) {
   .signup__intro__copy {
+    padding-top: 1.5rem;
     padding-bottom: 2.5rem;
   }
 }
 
+@media (min-width: 90rem) {
+  .signup__intro__copy {
+    padding-top: 2.5rem;
+  }
+}
+
 .signup__intro__copy__heading {
+  margin: 0;
   font-size: 2.5rem;
   line-height: 3rem;
   color: #333950;
@@ -935,17 +949,29 @@ a, a:hover, a:visited {
   }
 }
 
-.signup__form {
+.signup__info {
   padding-bottom: 5.5rem;
 }
 
 @media (min-width: 90rem) {
-  .signup__form {
+  .signup__info {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
             flex: 50%;
     margin-right: 0;
     padding-bottom: 0;
+  }
+}
+
+.signup__form {
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+          box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+}
+
+@media (min-width: 90rem) {
+  .signup__form {
+    margin-right: 0;
   }
 }
 
