@@ -5,10 +5,31 @@
 .signup__form__plan {
     font-weight: 700;
     color: $darkGray;
-}
 
-.signup__form__plan__price {
-    padding-left: 0.5rem;
-    font-weight: 700;
-    color: $grayHalfOpacity;
+    &.basic {
+        &::after {
+            content: 'Free';
+            padding-left: 0.5rem;
+            font-weight: 700;
+            color: $grayHalfOpacity;
+        }
+    }
+
+    &.pro {
+        &::after {
+            content: '$9.99';
+            padding-left: 0.5rem;
+            font-weight: 700;
+            color: $grayHalfOpacity;
+        }
+    }
+
+    &.ultimate {
+        &::after {
+            content: '$19.99';
+            padding-left: 0.5rem;
+            font-weight: 700;
+            color: $grayHalfOpacity;
+        }
+    }
 }

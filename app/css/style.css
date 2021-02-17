@@ -875,7 +875,22 @@ a, a:hover, a:visited {
   color: #333950;
 }
 
-.signup__form__plan__price {
+.signup__form__plan.basic::after {
+  content: 'Free';
+  padding-left: 0.5rem;
+  font-weight: 700;
+  color: rgba(116, 123, 149, 0.5);
+}
+
+.signup__form__plan.pro::after {
+  content: '$9.99';
+  padding-left: 0.5rem;
+  font-weight: 700;
+  color: rgba(116, 123, 149, 0.5);
+}
+
+.signup__form__plan.ultimate::after {
+  content: '$19.99';
   padding-left: 0.5rem;
   font-weight: 700;
   color: rgba(116, 123, 149, 0.5);

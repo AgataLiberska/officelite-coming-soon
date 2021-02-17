@@ -34,7 +34,7 @@ customSelectOptions.forEach(option => {
         option.classList.add('selected');
         
         // set input value to the text in selected option
-        customSelectInput.value = option.innerHTML;
+        customSelectInput.value = option.textContent;
 
         // close dropdown
         closeDropdown()
@@ -55,28 +55,26 @@ function closeDropdown() {
 
 
 
-// selecting from custom options
 
+// function doKeyAction(whichKey) {
+//     const focusPoint = document.activeElement;
+//     switch(whichKey) {
+//         case 'ArrowDown':
+//             openDropdown();
+//             moveFocus(focusPoint, 'forward');
+//             break;
+//         case 'ArrowUp':
+//             openDropdown();
+//             moveFocus(focusPoint, 'back');
+//             break;
+//         case 'Enter':
+//             makeChoice(focusPoint);
+//             closeDropdown();
+//             break;    
+//     }
+// }
 
-function doKeyAction(whichKey) {
-    const focusPoint = document.activeElement;
-    switch(whichKey) {
-        case 'ArrowDown':
-            openDropdown();
-            moveFocus(focusPoint, 'forward');
-            break;
-        case 'ArrowUp':
-            openDropdown();
-            moveFocus(focusPoint, 'back');
-            break;
-        case 'Enter':
-            makeChoice(focusPoint);
-            closeDropdown();
-            break;    
-    }
-}
-
-function makeChoice(whichOption) {
-    const optionText = whichOption.documentQuerySelector('.form__control_custom-select__item');
-    customSelectInput.value = optionText;
-}
+// function makeChoice(whichOption) {
+//     const optionText = whichOption.documentQuerySelector('.form__control_custom-select__item');
+//     customSelectInput.value = optionText;
+// }
