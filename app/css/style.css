@@ -757,7 +757,7 @@ a, a:hover, a:visited {
   background-color: #25293a;
   background-image: url("/assets/home/bg-pattern-footer.svg");
   background-size: cover;
-  background-position: center 12.25rem;
+  background-position: center 8.25rem;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -765,6 +765,8 @@ a, a:hover, a:visited {
 @media (min-width: 48rem) {
   .home-countdown::after {
     height: 60rem;
+    background-size: 91rem;
+    background-position: center -1rem;
   }
 }
 
@@ -778,7 +780,8 @@ a, a:hover, a:visited {
 @media (min-width: 90rem) {
   .home-countdown::after {
     height: 41rem;
-    background-position: -25rem -17rem;
+    background-size: 127rem;
+    background-position: -44rem -36rem;
   }
 }
 
