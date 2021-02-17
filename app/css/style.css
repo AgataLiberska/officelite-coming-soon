@@ -291,6 +291,13 @@ a, a:hover, a:visited {
   font-weight: 700;
 }
 
+@media (max-width: 23.375rem) {
+  .countdown-clock__timer__card__number {
+    font-size: 1.75rem;
+    padding: 0.75rem 0.5rem 0 0.5rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .countdown-clock__timer__card__number {
     padding-top: 2rem;
