@@ -23,7 +23,7 @@
     }
 }
 
-.open-toggle {
+.open-dropdown {
     animation: toggle-fadein 200ms ease-in-out forwards;
 }
 
@@ -44,6 +44,6 @@
     }
 }
 
-.close-toggle {
+.close-dropdown {
     animation: toggle-fadeout 200ms ease-in forwards;
 }

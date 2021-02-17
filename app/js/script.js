@@ -1,29 +1,82 @@
-const selectToggle = document.querySelector('.form__control_custom-select__toggle');
-const toggleIcon = document.querySelector('.form__control_custom-select__toggle__icon');
-const selectList = document.querySelector('.toggleable');
-const selectOptions = document.querySelector('form__control_custom-select__item')
-// const html = document.querySelector('html');
+const customSelectTrigger = document.querySelectorAll('.custom-select-trigger');
+const customSelectArrow = document.querySelector('.form__control_custom-select__toggle__icon');
+const customSelectDropdown = document.querySelector('.form__control_custom-select__dropdown');
+const customSelectOptions = document.querySelectorAll('.form__control_custom-select__item');
+const customSelectInput = document.querySelector('.form__control_custom-select__input');
 
-selectToggle.addEventListener('click', () => {
-        if (selectList.classList.contains('open-toggle')) {
-            selectList.classList.remove('open-toggle');
-            selectList.classList.add('close-toggle');
-            toggleIcon.classList.remove('is-open');
-        } 
-        else {
-            selectList.classList.remove('close-toggle');
-            selectList.classList.add('open-toggle');
-            toggleIcon.classList.add('is-open');
+customSelectOptions.forEach(option => {
+    option.setAttribute('tabindex', '-1');
+})
+
+
+// EVENT LISTENERS
+
+// open & close dropdown
+customSelectTrigger.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        if (customSelectDropdown.classList.contains('open-dropdown')) {
+            closeDropdown();
+        } else {
+            openDropdown();
         }
     })
+})
+
+// select option 
+customSelectOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        // check that the clicked option is not selected
+        if (!option.classList.contains('selected')) {
+            // find the selected option and unselect
+            option.parentNode.querySelector('.form__control_custom-select__item.selected').classList.remove('selected');
+        }
+        // select clicked option
+        option.classList.add('selected');
+        
+        // set input value to the text in selected option
+        customSelectInput.value = option.innerHTML;
+
+        // close dropdown
+        closeDropdown()
+    })
+})
+
+function openDropdown() {
+    customSelectDropdown.classList.remove('close-dropdown');
+    customSelectDropdown.classList.add('open-dropdown');
+    customSelectArrow.classList.add('is-open');
+}
+
+function closeDropdown() {
+    customSelectDropdown.classList.remove('open-dropdown');
+    customSelectDropdown.classList.add('close-dropdown');
+    customSelectArrow.classList.remove('is-open');
+}
 
 
-    // html.addEventListener('click', (e)=> {
-    //     if (e.target !== selectToggle) {
-    //         console.log(e.target.parentNode)
-    //         selectList.classList.remove('open-toggle');
-    //     }
-    // })
+
+// selecting from custom options
 
 
-console.log('hello')
+function doKeyAction(whichKey) {
+    const focusPoint = document.activeElement;
+    switch(whichKey) {
+        case 'ArrowDown':
+            openDropdown();
+            moveFocus(focusPoint, 'forward');
+            break;
+        case 'ArrowUp':
+            openDropdown();
+            moveFocus(focusPoint, 'back');
+            break;
+        case 'Enter':
+            makeChoice(focusPoint);
+            closeDropdown();
+            break;    
+    }
+}
+
+function makeChoice(whichOption) {
+    const optionText = whichOption.documentQuerySelector('.form__control_custom-select__item');
+    customSelectInput.value = optionText;
+}
