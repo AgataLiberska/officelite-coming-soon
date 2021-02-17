@@ -1,27 +1,6 @@
 .signup {
     position: relative;
-    min-height: 100vh;
     
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 20rem;
-        background-color: $veryDarkGray;
-        background-image: url('/assets/sign-up/bg-pattern-side.svg');
-        background-size: 75rem;
-        background-repeat: no-repeat;
-        background-position: center -25.25rem;
-        z-index: -1;
-
-        @include breakpoint-up(medium) {
-            background-size: 91rem;
-            background-position: center -33rem;
-        }
-    }
-
     @include breakpoint-up(xlarge) {
         display: flex;
         justify-content: space-between;

@@ -823,15 +823,16 @@ a, a:hover, a:visited {
 }
 
 .body--signup {
-  background-color: white;
-}
-
-.signup {
   position: relative;
-  min-height: 100vh;
 }
 
-.signup::after {
+@media (min-width: 90rem) {
+  .body--signup {
+    background-color: white;
+  }
+}
+
+.body--signup::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -847,10 +848,25 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .signup::after {
+  .body--signup::after {
     background-size: 91rem;
     background-position: center -33rem;
   }
+}
+
+@media (min-width: 90rem) {
+  .body--signup::after {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    height: unset;
+    width: 26.25rem;
+  }
+}
+
+.signup {
+  position: relative;
 }
 
 @media (min-width: 90rem) {
