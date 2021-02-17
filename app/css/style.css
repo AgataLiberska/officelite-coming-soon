@@ -128,6 +128,40 @@ a, a:hover, a:visited {
   }
 }
 
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #333950;
+}
+
+@media (min-width: 64rem) {
+  .heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.tagline {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #747b95;
+}
+
+@media (min-width: 64rem) {
+  .tagline {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .btn {
   display: inline-block;
   height: 3.5rem;
@@ -554,37 +588,15 @@ a, a:hover, a:visited {
 .hero__content__heading {
   margin: 0;
   padding-bottom: 1.5rem;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  font-weight: 700;
-  color: #25293a;
-}
-
-@media (min-width: 64rem) {
-  .hero__content__heading {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  .hero__content__heading {
-    font-size: 3.5rem;
-    line-height: 4rem;
-  }
 }
 
 .hero__content__tagline {
   display: block;
   padding-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #333950;
 }
 
 @media (min-width: 64rem) {
   .hero__content__tagline {
-    font-size: 1.25rem;
     padding-right: 1rem;
     padding-bottom: 2rem;
   }
@@ -945,34 +957,17 @@ a, a:hover, a:visited {
 
 .signup__intro__copy__heading {
   margin: 0;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  color: #333950;
-}
-
-@media (min-width: 64rem) {
-  .signup__intro__copy__heading {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 90rem) {
   .signup__intro__copy__heading {
-    font-size: 3.5rem;
-    line-height: 4rem;
+    padding-bottom: 1.5rem;
   }
-}
-
-.signup__intro__copy__tagline {
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #747b95;
 }
 
 @media (min-width: 64rem) {
   .signup__intro__copy__tagline {
-    font-size: 1.25rem;
     padding-right: 1rem;
     padding-bottom: 2rem;
   }
