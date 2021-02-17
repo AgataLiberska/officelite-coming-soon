@@ -128,6 +128,40 @@ a, a:hover, a:visited {
   }
 }
 
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #333950;
+}
+
+@media (min-width: 64rem) {
+  .heading {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .heading {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.tagline {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #747b95;
+}
+
+@media (min-width: 64rem) {
+  .tagline {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .btn {
   display: inline-block;
   height: 3.5rem;
@@ -255,6 +289,13 @@ a, a:hover, a:visited {
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 700;
+}
+
+@media (max-width: 23.375rem) {
+  .countdown-clock__timer__card__number {
+    font-size: 1.75rem;
+    padding: 0.75rem 0.5rem 0 0.5rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -438,6 +479,7 @@ a, a:hover, a:visited {
   background-size: 458px;
   background-repeat: no-repeat;
   background-position: center -170px;
+  z-index: -1;
 }
 
 @media (min-width: 48rem) {
@@ -553,37 +595,15 @@ a, a:hover, a:visited {
 .hero__content__heading {
   margin: 0;
   padding-bottom: 1.5rem;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  font-weight: 700;
-  color: #25293a;
-}
-
-@media (min-width: 64rem) {
-  .hero__content__heading {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  .hero__content__heading {
-    font-size: 3.5rem;
-    line-height: 4rem;
-  }
 }
 
 .hero__content__tagline {
   display: block;
   padding-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #333950;
 }
 
 @media (min-width: 64rem) {
   .hero__content__tagline {
-    font-size: 1.25rem;
     padding-right: 1rem;
     padding-bottom: 2rem;
   }
@@ -756,7 +776,7 @@ a, a:hover, a:visited {
   background-color: #25293a;
   background-image: url("/assets/home/bg-pattern-footer.svg");
   background-size: cover;
-  background-position: center 12.25rem;
+  background-position: center 8.25rem;
   background-repeat: no-repeat;
   z-index: -1;
 }
@@ -764,6 +784,8 @@ a, a:hover, a:visited {
 @media (min-width: 48rem) {
   .home-countdown::after {
     height: 60rem;
+    background-size: 91rem;
+    background-position: center -1rem;
   }
 }
 
@@ -777,7 +799,8 @@ a, a:hover, a:visited {
 @media (min-width: 90rem) {
   .home-countdown::after {
     height: 41rem;
-    background-position: -25rem -17rem;
+    background-size: 127rem;
+    background-position: -44rem -36rem;
   }
 }
 
@@ -941,34 +964,17 @@ a, a:hover, a:visited {
 
 .signup__intro__copy__heading {
   margin: 0;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  color: #333950;
-}
-
-@media (min-width: 64rem) {
-  .signup__intro__copy__heading {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 90rem) {
   .signup__intro__copy__heading {
-    font-size: 3.5rem;
-    line-height: 4rem;
+    padding-bottom: 1.5rem;
   }
-}
-
-.signup__intro__copy__tagline {
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #747b95;
 }
 
 @media (min-width: 64rem) {
   .signup__intro__copy__tagline {
-    font-size: 1.25rem;
     padding-right: 1rem;
     padding-bottom: 2rem;
   }

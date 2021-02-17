@@ -24,12 +24,14 @@
     background-color: $veryDarkGray;
     background-image: url('/assets/home/bg-pattern-footer.svg');
     background-size: cover;
-    background-position: center 12.25rem;
+    background-position: center 8.25rem;
     background-repeat: no-repeat;
     z-index: -1;
 
     @include breakpoint-up(medium) {
         height: 60rem;
+        background-size: 91rem;
+        background-position: center -1rem;
     }
 
     @include breakpoint-up(large) {
@@ -39,7 +41,8 @@
 
     @include breakpoint-up(xlarge) {
         height: 41rem;
-        background-position: -25rem -17rem;
+        background-size: 127rem;
+        background-position: -44rem -36rem;
     }
 }
 
