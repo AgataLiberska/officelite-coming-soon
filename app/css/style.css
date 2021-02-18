@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .toggleable {
@@ -350,13 +350,18 @@ a, a:hover, a:visited {
   }
 }
 
+.form__group {
+  position: relative;
+}
+
 .form__control {
+  position: relative;
   display: block;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem 1rem;
   border: 0;
   border-bottom: 1px solid rgba(116, 123, 149, 0.5);
   border-radius: 0;
@@ -364,6 +369,22 @@ a, a:hover, a:visited {
   font-size: 1rem;
   line-height: 1.75rem;
   color: #333950;
+}
+
+.form__control.not-valid {
+  border-bottom-color: #f05b5b;
+  color: #f05b5b;
+}
+
+.form__control.not-valid::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: red;
 }
 
 .form__control::-webkit-input-placeholder {
@@ -386,6 +407,14 @@ a, a:hover, a:visited {
   opacity: 0.5;
 }
 
+.form__control__error {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  padding: 1.75rem 1rem 1.25rem;
+}
+
 .form__control_custom-select {
   position: relative;
 }
@@ -397,9 +426,9 @@ a, a:hover, a:visited {
 .form__control_custom-select__toggle__icon {
   position: absolute;
   right: 0;
-  top: 0;
-  display: inline-block;
-  padding: 1rem;
+  bottom: 0;
+  display: block;
+  padding: 1rem 1rem 1rem;
   line-height: 1.75rem;
   cursor: pointer;
   -webkit-transition: -webkit-transform 200ms ease-in-out;
@@ -415,7 +444,7 @@ a, a:hover, a:visited {
 
 .form__control_custom-select__dropdown {
   position: absolute;
-  top: 4rem;
+  top: 4.5rem;
   left: 0;
   right: 0;
   margin: 0;
