@@ -1,5 +1,18 @@
 .hidden {
-  display: none;
+  visibility: hidden;
+}
+
+.hidden-visually {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
 }
 
 .toggleable {
@@ -350,13 +363,18 @@ a, a:hover, a:visited {
   }
 }
 
+.form__group {
+  position: relative;
+}
+
 .form__control {
+  position: relative;
   display: block;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   width: 100%;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem 1rem;
   border: 0;
   border-bottom: 1px solid rgba(116, 123, 149, 0.5);
   border-radius: 0;
@@ -364,6 +382,22 @@ a, a:hover, a:visited {
   font-size: 1rem;
   line-height: 1.75rem;
   color: #333950;
+}
+
+.form__control.not-valid {
+  border-bottom-color: #f05b5b;
+  color: #f05b5b;
+}
+
+.form__control.not-valid::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: red;
 }
 
 .form__control::-webkit-input-placeholder {
@@ -386,20 +420,28 @@ a, a:hover, a:visited {
   opacity: 0.5;
 }
 
-.form__control_custom-select {
+.form__control__error {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  padding: 1.75rem 1rem 1.25rem;
+}
+
+.form__control--custom-select {
   position: relative;
 }
 
-.form__control_custom-select__input {
+.form__control--custom-select__input {
   cursor: pointer;
 }
 
-.form__control_custom-select__toggle__icon {
+.form__control--custom-select__toggle__icon {
   position: absolute;
   right: 0;
-  top: 0;
-  display: inline-block;
-  padding: 1rem;
+  bottom: 0;
+  display: block;
+  padding: 1rem 1rem 1rem;
   line-height: 1.75rem;
   cursor: pointer;
   -webkit-transition: -webkit-transform 200ms ease-in-out;
@@ -408,14 +450,14 @@ a, a:hover, a:visited {
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
-.form__control_custom-select__toggle__icon.is-open {
+.form__control--custom-select__toggle__icon.is-open {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.form__control_custom-select__dropdown {
+.form__control--custom-select__dropdown {
   position: absolute;
-  top: 4rem;
+  top: 4.5rem;
   left: 0;
   right: 0;
   margin: 0;
@@ -429,18 +471,18 @@ a, a:hover, a:visited {
   z-index: 10;
 }
 
-.form__control_custom-select__item {
+.form__control--custom-select__item {
   position: relative;
   padding: 1rem 0;
   font-size: 1rem;
   line-height: 1.75rem;
 }
 
-.form__control_custom-select__item:not(:last-child) {
+.form__control--custom-select__item:not(:last-child) {
   border-bottom: 1px solid rgba(51, 57, 80, 0.15);
 }
 
-.form__control_custom-select__item.selected::before {
+.form__control--custom-select__item.selected::before {
   content: '';
   position: absolute;
   top: 0;
@@ -825,12 +867,12 @@ a, a:hover, a:visited {
   }
 }
 
-.header_signup {
+.header--signup {
   max-width: 1580px;
   margin: auto;
 }
 
-.header_signup::before {
+.header--signup::before {
   content: "";
   position: absolute;
   top: 0;
@@ -845,7 +887,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .header_signup::before {
+  .header--signup::before {
     display: none;
   }
 }

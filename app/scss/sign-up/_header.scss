@@ -1,9 +1,9 @@
-.header_signup {
+.header--signup {
     max-width: 1580px;
     margin: auto;
 }
 
-.header_signup::before {
+.header--signup::before {
     content: "";
     position: absolute;
     top:0;
