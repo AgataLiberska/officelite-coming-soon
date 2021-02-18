@@ -11,7 +11,7 @@
     <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body class="body--signup">
-  <header class="header header_signup container">
+  <header class="header header--signup container">
     <img src="/assets/shared/logo.svg" alt="Officelite logo">
   </header>
   <section class="signup container">
@@ -61,22 +61,22 @@
       </div>
     </div>
     <div class="signup__info">
-      <form action="" class="form signup__form">
+      <form action="" class="form signup__form" novalidate>
         <div class="form__group">
-          <input type="text" name="name" aria-label="Name" class="form__control" placeholder="Name">
+          <input id="name" type="text" name="name" aria-label="Name" class="form__control" placeholder="Name" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="form__group">
-          <input type="email" name="email" aria-label="Email" class="form__control" placeholder="Email">
+          <input type="email" name="email" aria-label="Email" class="form__control" placeholder="Email" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
-        <div class="form__control_custom-select">
-          <input type="text" name="plan" aria-label="Select plan" class="form__control form__control_custom-select__input custom-select-trigger signup__form__plan" value="Basic Pack">
-          <span class="form__control_custom-select__toggle__icon custom-select-trigger"><img src="/assets/sign-up/icon-arrow-down.svg" alt="" ></span>
-          <ul class="form__control_custom-select__dropdown toggleable ">
-            <li class="form__control_custom-select__item signup__form__plan basic selected" data-value="Basic">Basic Pack</li>
-            <li class="form__control_custom-select__item signup__form__plan pro" data-value="Pro">Pro Pack</li>
-            <li class="form__control_custom-select__item signup__form__plan ultimate" data-value="Ultimate">Ultimate Pack</li>
+        <div class="form__control--custom-select">
+          <input type="text" name="plan" aria-label="Select plan" class="form__control form__control--custom-select__input custom-select-trigger signup__form__plan" value="Basic Pack">
+          <span class="form__control--custom-select__toggle__icon custom-select-trigger"><img src="/assets/sign-up/icon-arrow-down.svg" alt="" ></span>
+          <ul class="form__control--custom-select__dropdown toggleable ">
+            <li class="form__control--custom-select__item signup__form__plan basic selected" data-value="Basic">Basic Pack</li>
+            <li class="form__control--custom-select__item signup__form__plan pro" data-value="Pro">Pro Pack</li>
+            <li class="form__control--custom-select__item signup__form__plan ultimate" data-value="Ultimate">Ultimate Pack</li>
           </ul>
         </div>
         <input type="tel" name="telNo" aria-label="Phone number" class="form__control" placeholder="Phone number">

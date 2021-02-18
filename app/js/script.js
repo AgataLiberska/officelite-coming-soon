@@ -1,8 +1,8 @@
 const customSelectTrigger = document.querySelectorAll('.custom-select-trigger');
-const customSelectArrow = document.querySelector('.form__control_custom-select__toggle__icon');
-const customSelectDropdown = document.querySelector('.form__control_custom-select__dropdown');
-const customSelectOptions = document.querySelectorAll('.form__control_custom-select__item');
-const customSelectInput = document.querySelector('.form__control_custom-select__input');
+const customSelectArrow = document.querySelector('.form__control--custom-select__toggle__icon');
+const customSelectDropdown = document.querySelector('.form__control--custom-select__dropdown');
+const customSelectOptions = document.querySelectorAll('.form__control--custom-select__item');
+const customSelectInput = document.querySelector('.form__control--custom-select__input');
 
 customSelectOptions.forEach(option => {
     option.setAttribute('tabindex', '-1');
@@ -28,7 +28,7 @@ customSelectOptions.forEach(option => {
         // check that the clicked option is not selected
         if (!option.classList.contains('selected')) {
             // find the selected option and unselect
-            option.parentNode.querySelector('.form__control_custom-select__item.selected').classList.remove('selected');
+            option.parentNode.querySelector('.form__control--custom-select__item.selected').classList.remove('selected');
         }
         // select clicked option
         option.classList.add('selected');
@@ -52,29 +52,3 @@ function closeDropdown() {
     customSelectDropdown.classList.add('close-dropdown');
     customSelectArrow.classList.remove('is-open');
 }
-
-
-
-
-// function doKeyAction(whichKey) {
-//     const focusPoint = document.activeElement;
-//     switch(whichKey) {
-//         case 'ArrowDown':
-//             openDropdown();
-//             moveFocus(focusPoint, 'forward');
-//             break;
-//         case 'ArrowUp':
-//             openDropdown();
-//             moveFocus(focusPoint, 'back');
-//             break;
-//         case 'Enter':
-//             makeChoice(focusPoint);
-//             closeDropdown();
-//             break;    
-//     }
-// }
-
-// function makeChoice(whichOption) {
-//     const optionText = whichOption.documentQuerySelector('.form__control_custom-select__item');
-//     customSelectInput.value = optionText;
-// }
