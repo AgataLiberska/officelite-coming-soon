@@ -63,11 +63,11 @@
     <div class="signup__info">
       <form action="" class="form signup__form" novalidate>
         <div class="form__group">
-          <input id="name" type="text" name="name" aria-label="Name" class="form__control" placeholder="Name" required>
+          <input id="name" type="text" name="name" aria-label="Name" class="form__control js-form-name" placeholder="Name" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="form__group">
-          <input type="email" name="email" aria-label="Email" class="form__control" placeholder="Email" required>
+          <input id="email" type="email" name="email" aria-label="Email" class="form__control js-form-email" placeholder="Email" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="form__control--custom-select">
@@ -79,8 +79,8 @@
             <li class="form__control--custom-select__item signup__form__plan ultimate" data-value="Ultimate">Ultimate Pack</li>
           </ul>
         </div>
-        <input type="tel" name="telNo" aria-label="Phone number" class="form__control" placeholder="Phone number">
-        <input type="text" name="company" aria-label="Company" class="form__control" placeholder="Company">
+        <input id="tel" type="tel" name="telNo" aria-label="Phone number" class="form__control" placeholder="Phone number">
+        <input id="company" type="text" name="company" aria-label="Company" class="form__control" placeholder="Company">
         <button class="btn form__submit">Get on the list</button>
       </form>
     </div>
