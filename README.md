@@ -35,6 +35,6 @@ Web accessibility is a topic that I continue to study and I will revisit this pr
 
 ## Giving feedback
 
-Feedback is always welcome, so if you have any to give on this challenge please email hi[at]frontendmentor[dot]io.
+Feedback is always welcome, so if you have any, please email liberska[at]gmail[dot]com.
 
-**Have fun building!** 🚀
+
