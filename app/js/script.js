@@ -10,7 +10,7 @@ customSelectOptions.forEach(option => {
     option.setAttribute('tabindex', '-1');
 })
 
-// EVENT LISTENERS -----------------------------------------------
+// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 
 
 // open & close dropdown
 customSelectTrigger.forEach(trigger => {
@@ -42,7 +42,7 @@ customSelectOptions.forEach(option => {
     })
 })
 
-// FUNCTIONS -----------------------------------------------------
+// FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
 function openDropdown() {
     customSelectDropdown.classList.remove('close-dropdown');
@@ -64,7 +64,7 @@ const form = document.querySelector('.form');
 const nameInput = document.querySelector('.js-form-name');
 const emailInput = document.querySelector('.js-form-email');
 
-// EVENT LISTENERS ------------------------------------------------
+// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - 
 
 // Check validity of the form on submit
 form.addEventListener('submit', (e) => {
@@ -98,7 +98,7 @@ form.addEventListener('input', () => {
 })
 
 
-// FUNCTIONS -----------------------------------------------------
+// FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
 function showError(input) {
     input.classList.add('not-valid');

@@ -68,10 +68,10 @@
     </section>
     <section class="home-countdown container">
       <div class="countdown-clock">
-        <span class="countdown-clock__heading countdown-clock_gray__heading home-countdown__heading">Coming <span class="countdown-clock__date">4 Nov 2020</span></span>
+        <span class="countdown-clock__heading countdown-clock_gray__heading home-countdown__heading">Coming <span class="countdown-clock__date js-due-date">4 Nov 2020</span></span>
         <div class="countdown-clock__timer home-countdown__timer">
           <div class="countdown-clock__timer__card countdown-clock_gray__timer__card">
-            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number countdown-clock_days">
+            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number js-days-left">
               47
             </span>
             <span class="countdown-clock__timer__card__text countdown-clock_gray__timer__card__text">
@@ -79,7 +79,7 @@
             </span>
           </div>
           <div class="countdown-clock__timer__card countdown-clock_gray__timer__card">
-            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number countdown-clock_hours">
+            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number js-hours-left">
               07
             </span>
             <span class="countdown-clock__timer__card__text countdown-clock_gray__timer__card__text">
@@ -87,7 +87,7 @@
             </span>
           </div>
           <div class="countdown-clock__timer__card countdown-clock_gray__timer__card">
-            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number countdown-clock_minutes">
+            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number js-minutes-left">
               56
             </span>
             <span class="countdown-clock__timer__card__text countdown-clock_gray__timer__card__text">
@@ -95,7 +95,7 @@
             </span>
           </div>
           <div class="countdown-clock__timer__card countdown-clock_gray__timer__card">
-            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number countdown-clock_seconds">
+            <span class="countdown-clock__timer__card__number countdown-clock_gray__timer__card__number js-seconds-left">
               14
             </span>
             <span class="countdown-clock__timer__card__text countdown-clock_gray__timer__card__text">
@@ -106,14 +106,8 @@
       </div>
       <a href="/sign-up.html" class="btn btn--cta home-countdown__button">Get Started</a>
     </section>
- 
     
-
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page
-  Coming 4 Nov 2020 -->
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+    <script src="/app/js/countdown.js"></script>
 
 </body>
 </html>
