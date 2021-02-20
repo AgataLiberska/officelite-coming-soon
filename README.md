@@ -33,8 +33,3 @@ Creating a custom select dropdown in the form instead of the native HTML <select
 
 Web accessibility is a topic that I continue to study and I will revisit this project in the near future to correct these issues.
 
-## Giving feedback
-
-Feedback is always welcome, so if you have any, please email liberska[at]gmail[dot]com.
-
-
