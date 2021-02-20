@@ -45,6 +45,7 @@ function updateCountdown() {
     minutesLeft %= 60;
     hoursLeft %= 24;
 
+    // display two digits if the number of hrs, mins, secs goes below 10
     secondsLeft < 10 ? secondsLeft = '0' + secondsLeft : secondsLeft
     minutesLeft < 10 ? minutesLeft = '0' + minutesLeft : minutesLeft
     hoursLeft < 10 ? hoursLeft = '0' + hoursLeft : hoursLeft
