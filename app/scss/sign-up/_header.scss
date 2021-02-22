@@ -1,5 +1,5 @@
 .header--signup {
-    max-width: 1580px;
+    max-width: 98.75rem;
     margin: auto;
 }
 
@@ -9,11 +9,11 @@
     top:0;
     left:0;
     right:0;
-    height: 288px;
+    height: 18rem;
     background-image: url('/assets/home/bg-pattern-header.svg');
-    background-size: 458px;
+    background-size: 28.625rem;
     background-repeat: no-repeat;
-    background-position: center -170px;
+    background-position: center -10.625rem;
     z-index: -1;
 
     @include breakpoint-up(medium) {
