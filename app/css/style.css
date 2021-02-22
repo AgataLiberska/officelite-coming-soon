@@ -726,7 +726,7 @@ a, a:hover, a:visited {
   }
 }
 
-.pricing__card__info__plan {
+.pricing__card__plan {
   margin: 0;
   padding-bottom: 2.5rem;
   font-size: 1.25rem;
@@ -735,12 +735,12 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
-  .pricing__card__info__plan {
+  .pricing__card__plan {
     padding-bottom: 1rem;
   }
 }
 
-.pricing__card__info__price {
+.pricing__card__price {
   display: block;
   font-size: 3.5rem;
   font-weight: 700;
@@ -748,7 +748,7 @@ a, a:hover, a:visited {
   padding-bottom: 0.5rem;
 }
 
-.pricing__card__info__details {
+.pricing__card__details {
   display: block;
   font-size: 1rem;
   line-height: 1.75rem;
@@ -756,7 +756,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
-  .pricing__card__info__details {
+  .pricing__card__details {
     padding-bottom: 0;
   }
 }
@@ -777,7 +777,7 @@ a, a:hover, a:visited {
   }
 }
 
-.pricing__card__features__item:not(:last-child) {
+.pricing__card__feat-item:not(:last-child) {
   padding-bottom: 1rem;
 }
 
