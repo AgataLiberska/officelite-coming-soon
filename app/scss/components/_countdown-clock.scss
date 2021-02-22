@@ -17,11 +17,11 @@
     }
 }
 
-.countdown-clock_gray__heading {
+.countdown-clock--gray__heading {
     color:$white;
 }
 
-.countdown-clock_blue__heading {
+.countdown-clock--blue__heading {
     color: $darkGray;
 }
 
@@ -42,7 +42,7 @@
     }
 }
 
-.countdown-clock__timer__card {
+.countdown-clock__card {
 
     border-radius: 0.25rem;
     text-align: center;
@@ -53,15 +53,15 @@
     }
 }
 
-.countdown-clock_gray__timer__card {
+.countdown-clock--gray__card {
     background-color: $darkGray;
 }
 
-.countdown-clock_blue__timer__card {
+.countdown-clock--blue__card {
     background-color: $veryLightBlue;
 }
 
-.countdown-clock__timer__card__number {
+.countdown-clock__number {
     display: block;
     padding: 0.75rem 1rem 0 1rem;
     text-align: center;
@@ -80,15 +80,15 @@
     }
 }
 
-.countdown-clock_gray__timer__card__number {
+.countdown-clock--gray__number {
     color:$white;
 }
 
-.countdown-clock_blue__timer__card__number {
+.countdown-clock--blue__number {
     color: $blue;
 }
 
-.countdown-clock__timer__card__text {
+.countdown-clock__text {
     display: block;
     padding-bottom: 0.75rem;
     font-size: 0.75rem;
@@ -101,10 +101,10 @@
     }
 }
 
-.countdown-clock_gray__timer__card__text {
+.countdown-clock--gray__text {
     color: $white;
 }
 
-.countdown-clock_blue__timer__card__text {
+.countdown-clock--blue__text {
     color: $darkGray;                 
 }
