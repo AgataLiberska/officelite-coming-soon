@@ -19,6 +19,12 @@
     border-radius: 0.75rem;
     text-align: center;
 
+    @include breakpoint-down(small) {
+        max-width: 27rem;
+        margin: auto;
+    }
+    
+
     &:not(:last-child) {
         margin-bottom: 2rem;
 
@@ -66,7 +72,7 @@
     }
 }
 
-.pricing__card__info__plan {
+.pricing__card__plan {
     margin: 0;
     padding-bottom: 2.5rem;
     font-size: 1.25rem;
@@ -78,7 +84,7 @@
     }
 }
 
-.pricing__card__info__price {
+.pricing__card__price {
     display: block;
     font-size: 3.5rem;
     font-weight: 700;
@@ -86,7 +92,7 @@
     padding-bottom: 0.5rem;
 }
 
-.pricing__card__info__details {
+.pricing__card__details {
     display: block;
     font-size: 1rem;
     line-height: 1.75rem;
@@ -111,7 +117,7 @@
     }
 }
 
-.pricing__card__features__item {
+.pricing__card__feat-item {
 
     &:not(:last-child) {
         padding-bottom: 1rem;

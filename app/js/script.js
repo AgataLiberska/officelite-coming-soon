@@ -1,10 +1,10 @@
 // ========= CUSTOM SELECT DROPDOWN ==========================
 
-const customSelectTrigger = document.querySelectorAll('.custom-select-trigger');
-const customSelectArrow = document.querySelector('.form__control--custom-select__toggle__icon');
-const customSelectDropdown = document.querySelector('.form__control--custom-select__dropdown');
-const customSelectOptions = document.querySelectorAll('.form__control--custom-select__item');
-const customSelectInput = document.querySelector('.form__control--custom-select__input');
+const customSelectTrigger = document.querySelectorAll('.js-custom-select-trigger');
+const customSelectArrow = document.querySelector('.custom-select__icon');
+const customSelectDropdown = document.querySelector('.custom-select__dropdown');
+const customSelectOptions = document.querySelectorAll('.custom-select__item');
+const customSelectInput = document.querySelector('.custom-select__input');
 
 customSelectOptions.forEach(option => {
     option.setAttribute('tabindex', '-1');
@@ -29,7 +29,7 @@ customSelectOptions.forEach(option => {
         // check that the clicked option is not selected
         if (!option.classList.contains('selected')) {
             // find the selected option and unselect
-            option.parentNode.querySelector('.form__control--custom-select__item.selected').classList.remove('selected');
+            option.parentNode.querySelector('.custom-select__item.selected').classList.remove('selected');
         }
         // select clicked option
         option.classList.add('selected');

@@ -246,11 +246,11 @@ a, a:hover, a:visited {
   }
 }
 
-.countdown-clock_gray__heading {
+.countdown-clock--gray__heading {
   color: white;
 }
 
-.countdown-clock_blue__heading {
+.countdown-clock--blue__heading {
   color: #333950;
 }
 
@@ -275,27 +275,27 @@ a, a:hover, a:visited {
   }
 }
 
-.countdown-clock__timer__card {
+.countdown-clock__card {
   border-radius: 0.25rem;
   text-align: center;
 }
 
 @media (min-width: 48rem) {
-  .countdown-clock__timer__card {
+  .countdown-clock__card {
     max-width: 6.25rem;
     border-radius: 0.75rem;
   }
 }
 
-.countdown-clock_gray__timer__card {
+.countdown-clock--gray__card {
   background-color: #333950;
 }
 
-.countdown-clock_blue__timer__card {
+.countdown-clock--blue__card {
   background-color: rgba(81, 117, 255, 0.15);
 }
 
-.countdown-clock__timer__card__number {
+.countdown-clock__number {
   display: block;
   padding: 0.75rem 1rem 0 1rem;
   text-align: center;
@@ -305,28 +305,28 @@ a, a:hover, a:visited {
 }
 
 @media (max-width: 23.375rem) {
-  .countdown-clock__timer__card__number {
+  .countdown-clock__number {
     font-size: 1.75rem;
     padding: 0.75rem 0.5rem 0 0.5rem;
   }
 }
 
 @media (min-width: 48rem) {
-  .countdown-clock__timer__card__number {
+  .countdown-clock__number {
     padding-top: 2rem;
     font-size: 3.5rem;
   }
 }
 
-.countdown-clock_gray__timer__card__number {
+.countdown-clock--gray__number {
   color: white;
 }
 
-.countdown-clock_blue__timer__card__number {
+.countdown-clock--blue__number {
   color: #5175ff;
 }
 
-.countdown-clock__timer__card__text {
+.countdown-clock__text {
   display: block;
   padding-bottom: 0.75rem;
   font-size: 0.75rem;
@@ -336,16 +336,16 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) {
-  .countdown-clock__timer__card__text {
+  .countdown-clock__text {
     font-size: 1rem;
   }
 }
 
-.countdown-clock_gray__timer__card__text {
+.countdown-clock--gray__text {
   color: white;
 }
 
-.countdown-clock_blue__timer__card__text {
+.countdown-clock--blue__text {
   color: #333950;
 }
 
@@ -428,15 +428,31 @@ a, a:hover, a:visited {
   padding: 1.75rem 1rem 1.25rem;
 }
 
-.form__control--custom-select {
+.form__submit {
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #5175ff;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: white;
+}
+
+.form__submit:hover {
+  background-color: #829cff;
+}
+
+.custom-select {
   position: relative;
 }
 
-.form__control--custom-select__input {
+.custom-select__input {
   cursor: pointer;
 }
 
-.form__control--custom-select__toggle__icon {
+.custom-select__icon {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -450,12 +466,12 @@ a, a:hover, a:visited {
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
-.form__control--custom-select__toggle__icon.is-open {
+.custom-select__icon.is-open {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.form__control--custom-select__dropdown {
+.custom-select__dropdown {
   position: absolute;
   top: 4.5rem;
   left: 0;
@@ -471,18 +487,18 @@ a, a:hover, a:visited {
   z-index: 10;
 }
 
-.form__control--custom-select__item {
+.custom-select__item {
   position: relative;
   padding: 1rem 0;
   font-size: 1rem;
   line-height: 1.75rem;
 }
 
-.form__control--custom-select__item:not(:last-child) {
+.custom-select__item:not(:last-child) {
   border-bottom: 1px solid rgba(51, 57, 80, 0.15);
 }
 
-.form__control--custom-select__item.selected::before {
+.custom-select__item.selected::before {
   content: '';
   position: absolute;
   top: 0;
@@ -492,22 +508,6 @@ a, a:hover, a:visited {
   background-image: url("/assets/sign-up/icon-check.svg");
   background-repeat: no-repeat;
   background-position: center right 0.25rem;
-}
-
-.form__submit {
-  width: 100%;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  border: none;
-  background-color: #5175ff;
-  font-family: inherit;
-  font-size: 1rem;
-  line-height: 1.75rem;
-  color: white;
-}
-
-.form__submit:hover {
-  background-color: #829cff;
 }
 
 .header_homepage::before {
@@ -679,6 +679,13 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
+@media (max-width: 47.9375rem) {
+  .pricing__card {
+    max-width: 27rem;
+    margin: auto;
+  }
+}
+
 .pricing__card:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -726,7 +733,7 @@ a, a:hover, a:visited {
   }
 }
 
-.pricing__card__info__plan {
+.pricing__card__plan {
   margin: 0;
   padding-bottom: 2.5rem;
   font-size: 1.25rem;
@@ -735,12 +742,12 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
-  .pricing__card__info__plan {
+  .pricing__card__plan {
     padding-bottom: 1rem;
   }
 }
 
-.pricing__card__info__price {
+.pricing__card__price {
   display: block;
   font-size: 3.5rem;
   font-weight: 700;
@@ -748,7 +755,7 @@ a, a:hover, a:visited {
   padding-bottom: 0.5rem;
 }
 
-.pricing__card__info__details {
+.pricing__card__details {
   display: block;
   font-size: 1rem;
   line-height: 1.75rem;
@@ -756,7 +763,7 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
-  .pricing__card__info__details {
+  .pricing__card__details {
     padding-bottom: 0;
   }
 }
@@ -777,7 +784,7 @@ a, a:hover, a:visited {
   }
 }
 
-.pricing__card__features__item:not(:last-child) {
+.pricing__card__feat-item:not(:last-child) {
   padding-bottom: 1rem;
 }
 
@@ -868,7 +875,7 @@ a, a:hover, a:visited {
 }
 
 .header--signup {
-  max-width: 1580px;
+  max-width: 98.75rem;
   margin: auto;
 }
 
@@ -878,11 +885,11 @@ a, a:hover, a:visited {
   top: 0;
   left: 0;
   right: 0;
-  height: 288px;
+  height: 18rem;
   background-image: url("/assets/home/bg-pattern-header.svg");
-  background-size: 458px;
+  background-size: 28.625rem;
   background-repeat: no-repeat;
-  background-position: center -170px;
+  background-position: center -10.625rem;
   z-index: -1;
 }
 
