@@ -679,6 +679,13 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
+@media (max-width: 47.9375rem) {
+  .pricing__card {
+    max-width: 27rem;
+    margin: auto;
+  }
+}
+
 .pricing__card:not(:last-child) {
   margin-bottom: 2rem;
 }
