@@ -60,15 +60,15 @@
     padding: 1.75rem 1rem 1.25rem;
 }
 
-.form__control--custom-select {
+.custom-select {
     position: relative;
 }
 
-.form__control--custom-select__input {
+.custom-select__input {
     cursor: pointer;
 }
 
-.form__control--custom-select__toggle__icon {
+.custom-select__icon {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -83,7 +83,7 @@
     }
 }
 
-.form__control--custom-select__dropdown {
+.custom-select__dropdown {
     position: absolute;
     top: 4.5rem;
     left: 0;
@@ -98,7 +98,7 @@
     z-index: 10;
 }
 
-.form__control--custom-select__item {
+.custom-select__item {
     position: relative;
     padding: 1rem 0;
     font-size: 1rem;

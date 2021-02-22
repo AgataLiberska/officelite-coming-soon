@@ -428,15 +428,15 @@ a, a:hover, a:visited {
   padding: 1.75rem 1rem 1.25rem;
 }
 
-.form__control--custom-select {
+.custom-select {
   position: relative;
 }
 
-.form__control--custom-select__input {
+.custom-select__input {
   cursor: pointer;
 }
 
-.form__control--custom-select__toggle__icon {
+.custom-select__icon {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -450,12 +450,12 @@ a, a:hover, a:visited {
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
-.form__control--custom-select__toggle__icon.is-open {
+.custom-select__icon.is-open {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.form__control--custom-select__dropdown {
+.custom-select__dropdown {
   position: absolute;
   top: 4.5rem;
   left: 0;
@@ -471,18 +471,18 @@ a, a:hover, a:visited {
   z-index: 10;
 }
 
-.form__control--custom-select__item {
+.custom-select__item {
   position: relative;
   padding: 1rem 0;
   font-size: 1rem;
   line-height: 1.75rem;
 }
 
-.form__control--custom-select__item:not(:last-child) {
+.custom-select__item:not(:last-child) {
   border-bottom: 1px solid rgba(51, 57, 80, 0.15);
 }
 
-.form__control--custom-select__item.selected::before {
+.custom-select__item.selected::before {
   content: '';
   position: absolute;
   top: 0;
