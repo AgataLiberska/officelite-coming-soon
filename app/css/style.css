@@ -403,6 +403,13 @@ a, a:hover, a:visited {
   font-size: 1rem;
   line-height: 1.75rem;
   color: #333950;
+  -webkit-transition: border 200ms ease-in-out;
+  transition: border 200ms ease-in-out;
+}
+
+.form__control:focus {
+  outline: 0;
+  border-bottom: 2px solid #829cff;
 }
 
 .form__control.not-valid {
@@ -459,10 +466,20 @@ a, a:hover, a:visited {
   font-size: 1rem;
   line-height: 1.75rem;
   color: white;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .form__submit:hover {
   background-color: #829cff;
+}
+
+.form__submit:focus {
+  outline: 0;
+  background-color: #829cff;
+  -webkit-box-shadow: 0 0 1px 2px white, 0 0 3px 4px #829cff;
+          box-shadow: 0 0 1px 2px white, 0 0 3px 4px #829cff;
 }
 
 .custom-select {
