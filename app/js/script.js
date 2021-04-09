@@ -1,8 +1,7 @@
 // ========= CUSTOM SELECT DROPDOWN ==========================
 
-const customSelect = document.querySelector('.js-custom-select');
-const csTrigger = document.querySelectorAll('.js-custom-select-trigger');
-const csArrow = document.querySelector('.custom-select__icon');
+const customSelect = document.querySelector('.custom-select');
+const csIcon = document.querySelector('.custom-select__icon');
 const csDropdown = document.querySelector('.custom-select__dropdown');
 const csOptions = document.querySelectorAll('.custom-select__item');
 const csInput = document.querySelector('.custom-select__input');
@@ -51,7 +50,7 @@ customSelect.addEventListener('click', e => {
 customSelect.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
         e.preventDefault();
-    } 
+    }
 })
 
 customSelect.addEventListener('keyup', e => {
@@ -71,14 +70,14 @@ function openDropdown() {
     csDropdown.classList.remove('close-dropdown');
     csDropdown.classList.add('open-dropdown');
     csDropdown.setAttribute('aria-expanded', 'true');
-    csArrow.classList.add('is-open');
+    csIcon.classList.add('is-open');
 }
 
 function closeDropdown() {
     csDropdown.classList.remove('open-dropdown');
     csDropdown.classList.add('close-dropdown');
     csDropdown.removeAttribute('aria-expanded');
-    csArrow.classList.remove('is-open');
+    csIcon.classList.remove('is-open');
 }
 
 function makeSelection(option) {
