@@ -1,21 +1,22 @@
 // ========= CUSTOM SELECT DROPDOWN ==========================
 
-const customSelector = document.querySelector('.js-custom-select');
+const customSelect = document.querySelector('.js-custom-select');
 const csTrigger = document.querySelectorAll('.js-custom-select-trigger');
 const csArrow = document.querySelector('.custom-select__icon');
 const csDropdown = document.querySelector('.custom-select__dropdown');
 const csOptions = document.querySelectorAll('.custom-select__item');
 const csInput = document.querySelector('.custom-select__input');
+const arOptions = Array.from(csOptions);
 
 let csState = 'initial';
 
-customSelector.setAttribute("role", "combobox");
-customSelector.setAttribute("has-popup", "listbox");
-customSelector.setAttribute("aria-owns", "custom-select-list");
+customSelect.setAttribute("role", "combobox");
+customSelect.setAttribute("has-popup", "listbox");
+customSelect.setAttribute("aria-owns", "custom-select-list");
 
 csDropdown.setAttribute("role", "listbox");
 
-csInput.setAttribute("aria-autocomplere", "both");
+csInput.setAttribute("aria-autocomplere", "list");
 csInput.setAttribute("aria-controls", "custom-select-list");
 
 csOptions.forEach(option => {
@@ -23,9 +24,11 @@ csOptions.forEach(option => {
     option.setAttribute("tabindex","-1");
 })
 
+
+
 // EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 
 
-customSelector.addEventListener('click', e => {
+customSelect.addEventListener('click', e => {
     const currentFocus = findFocus();
     switch(csState) {
         case 'initial' :
@@ -45,13 +48,13 @@ customSelector.addEventListener('click', e => {
     }
 })
 
-customSelector.addEventListener('keydown', e => {
+customSelect.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
         e.preventDefault();
-    }
+    } 
 })
 
-customSelector.addEventListener('keyup', e => {
+customSelect.addEventListener('keyup', e => {
     handleKeyAction(e.key);
 })
 
@@ -100,6 +103,49 @@ function findFocus() {
     return focusPoint;
 }
 
+function moveFocus(fromHere, toThere) {
+    switch(fromHere) {
+        case csInput:
+            if (toThere === 'forward') {
+                csOptions[0].focus();
+            }
+            else if (toThere === 'back') {
+                csOptions[csOptions.length - 1].focus();
+            }
+            break;
+        case arOptions[0] :
+            if (toThere === 'forward') {
+                arOptions[1].focus();
+            }
+            else {
+                arOptions[arOptions.length -1].focus();
+            }
+            break;
+        case arOptions[arOptions.length-1] :
+            if (toThere === 'forward') {
+                arOptions[0].focus() ;
+            }
+            else if (toThere === 'back') {
+                arOptions[arOptions.length-2].focus();
+            }
+            break;
+        default :
+            const currentItem = findFocus();
+            const whichOne = arOptions.indexOf(currentItem);          
+            if (toThere === 'forward') {
+                const nextOne = arOptions[whichOne + 1];
+                nextOne.focus();
+            }
+            else if (toThere === 'back' && whichOne > 0) {
+                const previousOne = arOptions[whichOne-1];
+                previousOne.focus();
+            } else {
+                csInput.focus();
+            }
+
+    }
+}
+
 function handleKeyAction(key) {
     const currentFocus = findFocus();
 
@@ -122,12 +168,39 @@ function handleKeyAction(key) {
                 setState('initial');
             }
             break;
-        case 'Space':
-            if (csState === 'initial' && currentFocus === csInput) {
+        case 'Escape' :
+            if (csState === 'opened') {
+                closeDropdown();
+                setState('initial');
+                moveFocus(currentFocus, csInput);
+            }
+            break;
+        case 'ArrowDown' :
+            if (csState === 'initial') {
+                openDropdown();
+                moveFocus(csInput, 'forward');
+                setState('opened');
+            }
+            else {
+                openDropdown();
+                moveFocus(currentFocus, 'forward');
+            }
+            break;
+        case 'ArrowUp' :
+            if (csState === 'initial') {
+                openDropdown();
+                moveFocus(csInput, 'back');
+                setState('opened');
+            }
+            else {
+                moveFocus(currentFocus, 'back');
+            }
+            break;
+        default:
+            if (csState === 'initial') {
                 openDropdown();
                 setState('opened');
             }
-            break;
     }
 }
 // =========== FORM VALIDATION ====================================
