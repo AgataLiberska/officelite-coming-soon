@@ -64,12 +64,12 @@
       <form action="" class="form signup__form">
         <div class="form__group">
           <label for="name" class="hidden-visually">Enter name</label>
-          <input id="name" type="text" name="name" class="form__control js-form-name" placeholder="Name" required>
+          <input id="name" type="text" name="name" class="form__control js-form-name" placeholder="Name" autocomplete="name" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="form__group">
           <label for="email" class="hidden-visually">Enter email</label>
-          <input id="email" type="email" name="email" class="form__control js-form-email" placeholder="Email" required>
+          <input id="email" type="email" name="email" class="form__control js-form-email" placeholder="Email" autocomplete="email" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="custom-select">
@@ -84,11 +84,11 @@
         </div>
         <div class="form__group">
           <label for="tel" class="hidden-visually">Telephone number</label>
-          <input id="tel" type="tel" name="telNo" class="form__control" placeholder="Phone number">
+          <input id="tel" type="tel" name="telNo" class="form__control" placeholder="Phone number" autocomplete="tel">
         </div>
         <div class="form__group">
           <label for="company" class="hidden-visually">Company name</label>
-          <input id="company" type="text" name="company" class="form__control" placeholder="Company">
+          <input id="company" type="text" name="company" class="form__control" placeholder="Company" autocomplte="organization">
         </div>
 
         <button type="submit" class="btn form__submit">Get on the list</button>
