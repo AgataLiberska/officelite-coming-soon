@@ -7,40 +7,6 @@ const emailInput = document.querySelector('.js-form-email');
 
 form.setAttribute("novalidate", "");
 
-// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - 
-
-// Check validity of the form on submit
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // if name is empty
-    if (nameInput.validity.valueMissing) {
-        showError(nameInput);
-    }
-    // if email is empty
-    if (emailInput.validity.valueMissing) {
-        showError(emailInput);
-    } 
-    // if email is not an email format
-    else if (!isEmail(emailInput)) {
-        showError(emailInput);
-    }
-})
-
-
-// Check validity of fields on input
-form.addEventListener('input', () => {
-    // name not empty
-    if (nameInput.validity.valid) {
-        removeError(nameInput);
-    }
-    // email is in email format
-    if (isEmail(emailInput)) {
-        removeError(emailInput);
-    }
-})
-
-
 // FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
 function showError(input) {
@@ -68,4 +34,34 @@ function hideErrorIcon(input) {
 function isEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value);
 }
+
+// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - 
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (nameInput.validity.valueMissing) {
+        showError(nameInput);
+    }
+
+    if (emailInput.validity.valueMissing) {
+        showError(emailInput);
+    } 
+    else if (!isEmail(emailInput)) {
+        showError(emailInput);
+    }
+})
+
+
+form.addEventListener('input', () => {
+    if (nameInput.validity.valid) {
+        removeError(nameInput);
+    }
+    if (isEmail(emailInput)) {
+        removeError(emailInput);
+    }
+})
+
+
+
 
