@@ -1,22 +1,22 @@
 // ========= CUSTOM SELECT DROPDOWN ==========================
 
-const customSelectContainer = document.querySelector('.js-custom-select');
-const customSelectTrigger = document.querySelectorAll('.js-custom-select-trigger');
-const customSelectArrow = document.querySelector('.custom-select__icon');
-const customSelectDropdown = document.querySelector('.custom-select__dropdown');
-const customSelectOptions = document.querySelectorAll('.custom-select__item');
-const customSelectInput = document.querySelector('.custom-select__input');
+const csContainer = document.querySelector('.js-custom-select');
+const csTrigger = document.querySelectorAll('.js-custom-select-trigger');
+const csArrow = document.querySelector('.custom-select__icon');
+const csDropdown = document.querySelector('.custom-select__dropdown');
+const csOptions = document.querySelectorAll('.custom-select__item');
+const csInput = document.querySelector('.custom-select__input');
 
-customSelectContainer.setAttribute("role", "combobox");
-customSelectContainer.setAttribute("has-popup", "listbox");
-customSelectContainer.setAttribute("aria-owns", "custom-select-list");
+csContainer.setAttribute("role", "combobox");
+csContainer.setAttribute("has-popup", "listbox");
+csContainer.setAttribute("aria-owns", "custom-select-list");
 
-customSelectDropdown.setAttribute("role", "listbox");
+csDropdown.setAttribute("role", "listbox");
 
-customSelectInput.setAttribute("aria-autocomplere", "both");
-customSelectInput.setAttribute("aria-controls", "custom-select-list");
+csInput.setAttribute("aria-autocomplere", "both");
+csInput.setAttribute("aria-controls", "custom-select-list");
 
-customSelectOptions.forEach(option => {
+csOptions.forEach(option => {
     option.setAttribute("role", "option")
     option.setAttribute("tabindex","-1");
 })
@@ -24,9 +24,9 @@ customSelectOptions.forEach(option => {
 // EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 
 
 // open & close dropdown
-customSelectTrigger.forEach(trigger => {
+csTrigger.forEach(trigger => {
     trigger.addEventListener('click', () => {
-        if (customSelectDropdown.classList.contains('open-dropdown')) {
+        if (csDropdown.classList.contains('open-dropdown')) {
             closeDropdown();
         } else {
             openDropdown();
@@ -35,7 +35,7 @@ customSelectTrigger.forEach(trigger => {
 })
 
 // select option 
-customSelectOptions.forEach(option => {
+csOptions.forEach(option => {
     option.addEventListener('click', () => {
         // check that the clicked option is not selected
         if (!option.classList.contains('selected')) {
@@ -46,7 +46,7 @@ customSelectOptions.forEach(option => {
         option.classList.add('selected');
         
         // set input value to the text in selected option
-        customSelectInput.value = option.textContent;
+        csInput.value = option.textContent;
 
         // close dropdown
         closeDropdown()
@@ -56,15 +56,17 @@ customSelectOptions.forEach(option => {
 // FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
 function openDropdown() {
-    customSelectDropdown.classList.remove('close-dropdown');
-    customSelectDropdown.classList.add('open-dropdown');
-    customSelectArrow.classList.add('is-open');
+    csDropdown.classList.remove('close-dropdown');
+    csDropdown.classList.add('open-dropdown');
+    csDropdown.setAttribute("aria-expanded", "true");
+    csArrow.classList.add('is-open');
 }
 
 function closeDropdown() {
-    customSelectDropdown.classList.remove('open-dropdown');
-    customSelectDropdown.classList.add('close-dropdown');
-    customSelectArrow.classList.remove('is-open');
+    csDropdown.classList.remove('open-dropdown');
+    csDropdown.classList.add('close-dropdown');
+    csDropdown.setAttribute("aria-expanded", "false");
+    csArrow.classList.remove('is-open');
 }
 
 
