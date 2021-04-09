@@ -52,12 +52,11 @@ customSelector.addEventListener('keydown', e => {
 })
 
 customSelector.addEventListener('keyup', e => {
-    
     handleKeyAction(e.key);
 })
 
 document.addEventListener('click', e => {
-    if (!e.target.closest('.js-custom-select')) {
+    if (csState === 'opened' && !e.target.closest('.js-custom-select')) {
         closeDropdown();
         setState('initial');
     }
@@ -119,6 +118,14 @@ function handleKeyAction(key) {
                 closeDropdown();
                 setState('closed');
             }
+            break;
+        case 'Space':
+            if (csState === 'initial' && currentFocus === csInput) {
+                openDropdown();
+                setState('opened');
+            }
+            break;
+        case 
     }
 }
 // =========== FORM VALIDATION ====================================
