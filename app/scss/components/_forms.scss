@@ -137,9 +137,15 @@
     padding: 1rem 0;
     font-size: 1rem;
     line-height: 1.75rem;
+    transition: background-color 200ms ease-in-out;
 
     &:not(:last-child) {
         border-bottom: 1px solid $darkGrayLowOpacity;
+    }
+    
+    &:focus {
+        outline: 0;
+        background-color: $veryLightBlue;
     }
 
     &.selected {

@@ -530,10 +530,17 @@ a, a:hover, a:visited {
   padding: 1rem 0;
   font-size: 1rem;
   line-height: 1.75rem;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 .custom-select__item:not(:last-child) {
   border-bottom: 1px solid rgba(51, 57, 80, 0.15);
+}
+
+.custom-select__item:focus {
+  outline: 0;
+  background-color: rgba(81, 117, 255, 0.15);
 }
 
 .custom-select__item.selected::before {
