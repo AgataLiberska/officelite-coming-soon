@@ -45,6 +45,17 @@ customSelector.addEventListener('click', e => {
     }
 })
 
+customSelector.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+    }
+})
+
+customSelector.addEventListener('keyup', e => {
+    
+    handleKeyAction(e.key);
+})
+
 document.addEventListener('click', e => {
     if (!e.target.closest('.js-custom-select')) {
         closeDropdown();
@@ -57,14 +68,14 @@ document.addEventListener('click', e => {
 function openDropdown() {
     csDropdown.classList.remove('close-dropdown');
     csDropdown.classList.add('open-dropdown');
-    csDropdown.setAttribute("aria-expanded", "true");
+    csDropdown.setAttribute('aria-expanded', 'true');
     csArrow.classList.add('is-open');
 }
 
 function closeDropdown() {
     csDropdown.classList.remove('open-dropdown');
     csDropdown.classList.add('close-dropdown');
-    csDropdown.setAttribute("aria-expanded", "false");
+    csDropdown.setAttribute('aria-expanded', 'false');
     csArrow.classList.remove('is-open');
 }
 
@@ -74,10 +85,7 @@ function makeSelection(option) {
         // find the selected option and unselect
         option.parentNode.querySelector('.custom-select__item.selected').classList.remove('selected');
     }
-    // select clicked option
     option.classList.add('selected');
-    
-    // set input value to the text in selected option
     csInput.value = option.textContent;
 }
 
@@ -88,6 +96,30 @@ function setState(newState) {
 function findFocus() {
     const focusPoint = document.activeElement;
     return focusPoint;
+}
+
+function handleKeyAction(key) {
+    const currentFocus = findFocus();
+
+    switch(key) {
+        case 'Enter':
+            // if dropdown is closed, open
+            if (csState === 'initial') {
+                openDropdown();
+                setState('opened');
+            }
+            //if dropdown is opened and focus is on input, close
+            else if (csState === 'opened' && currentFocus === csInput) {
+                closeDropdown();
+                setState('closed');
+            }
+            // if dropdown is opened and focus is on option, select and close
+            else if (csState === 'opened' && currentFocus.tagName === 'LI') {
+                makeSelection(currentFocus);
+                closeDropdown();
+                setState('closed');
+            }
+    }
 }
 // =========== FORM VALIDATION ====================================
 // Name is required, Email is required, Email needs to be email
