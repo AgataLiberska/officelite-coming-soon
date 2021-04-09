@@ -24,54 +24,6 @@ csOptions.forEach(option => {
 })
 
 
-
-// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 
-
-customSelect.addEventListener('click', e => {
-    const currentFocus = findFocus();
-    switch(csState) {
-        case 'initial' :
-            openDropdown();
-            setState('opened');
-            break;
-        case 'opened' :
-            if (currentFocus === csInput) {
-                closeDropdown();
-                setState('initial');
-            } else if (currentFocus.tagName === 'LI') {
-                makeSelection(currentFocus);
-                closeDropdown();
-                setState('initial');
-            }
-            break;
-    }
-})
-
-customSelect.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-        e.preventDefault();
-    }
-})
-
-customSelect.addEventListener('keyup', e => {
-    handleKeyAction(e.key);
-})
-
-customSelect.addEventListener('focusout', e => {
-    console.log(e);
-    if (e.relatedTarget.tagName === 'INPUT') {
-        closeDropdown();
-        setState('initial');
-    }
-})
-
-document.addEventListener('click', e => {
-    if (csState === 'opened' && !e.target.closest('.js-custom-select')) {
-        closeDropdown();
-        setState('initial');
-    }
-})
-
 // FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
 function openDropdown() {
@@ -173,6 +125,7 @@ function handleKeyAction(key) {
                 makeSelection(currentFocus);
                 closeDropdown();
                 setState('initial');
+                moveFocus(currentFocus, csInput);
             }
             break;
         case 'Escape' :
@@ -210,74 +163,50 @@ function handleKeyAction(key) {
             }
     }
 }
-// =========== FORM VALIDATION ====================================
-// Name is required, Email is required, Email needs to be email
 
-const form = document.querySelector('.form');
-const nameInput = document.querySelector('.js-form-name');
-const emailInput = document.querySelector('.js-form-email');
 
-form.setAttribute("novalidate", "");
+// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 
 
-// EVENT LISTENERS - - - - - - - - - - - - - - - - - - - 
-
-// Check validity of the form on submit
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // if name is empty
-    if (nameInput.validity.valueMissing) {
-        showError(nameInput);
-    }
-    // if email is empty
-    if (emailInput.validity.valueMissing) {
-        showError(emailInput);
-    } 
-    // if email is not an email format
-    else if (!isEmail(emailInput)) {
-        showError(emailInput);
+customSelect.addEventListener('click', e => {
+    const currentFocus = findFocus();
+    switch(csState) {
+        case 'initial' :
+            openDropdown();
+            setState('opened');
+            break;
+        case 'opened' :
+            if (currentFocus === csInput) {
+                closeDropdown();
+                setState('initial');
+            } else if (currentFocus.tagName === 'LI') {
+                makeSelection(currentFocus);
+                closeDropdown();
+                setState('initial');
+            }
+            break;
     }
 })
 
-
-// Check validity of fields on input
-form.addEventListener('input', () => {
-    // name not empty
-    if (nameInput.validity.valid) {
-        removeError(nameInput);
-    }
-    // email is in email format
-    if (isEmail(emailInput)) {
-        removeError(emailInput);
+customSelect.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
     }
 })
 
+customSelect.addEventListener('keyup', e => {
+    handleKeyAction(e.key);
+})
 
-// FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
+customSelect.addEventListener('focusout', e => {
+    if (e.relatedTarget.tagName === 'INPUT' && e.relatedTarget !== csInput) {
+        closeDropdown();
+        setState('initial');
+    }
+})
 
-function showError(input) {
-    input.classList.add('not-valid');
-    displayErrorIcon(input);
-}
-
-function removeError(input) {
-    input.classList.remove('not-valid');
-    hideErrorIcon(input);
-}
-
-function displayErrorIcon(input) {
-    let formGroup = input.parentElement;
-    let errorIcon = formGroup.querySelector('.form__control__error');
-    errorIcon.classList.remove('hidden');
-}
-
-function hideErrorIcon(input) {
-    let formGroup = input.parentElement;
-    let errorIcon = formGroup.querySelector('.form__control__error');
-    errorIcon.classList.add('hidden');
-}
-
-function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email.value);
-}
-
+document.addEventListener('click', e => {
+    if (csState === 'opened' && !e.target.closest('.js-custom-select')) {
+        closeDropdown();
+        setState('initial');
+    }
+})
