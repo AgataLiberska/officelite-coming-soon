@@ -1,15 +1,17 @@
 // ========= CUSTOM SELECT DROPDOWN ==========================
 
-const csContainer = document.querySelector('.js-custom-select');
+const customSelector = document.querySelector('.js-custom-select');
 const csTrigger = document.querySelectorAll('.js-custom-select-trigger');
 const csArrow = document.querySelector('.custom-select__icon');
 const csDropdown = document.querySelector('.custom-select__dropdown');
 const csOptions = document.querySelectorAll('.custom-select__item');
 const csInput = document.querySelector('.custom-select__input');
 
-csContainer.setAttribute("role", "combobox");
-csContainer.setAttribute("has-popup", "listbox");
-csContainer.setAttribute("aria-owns", "custom-select-list");
+let csState = 'initial';
+
+customSelector.setAttribute("role", "combobox");
+customSelector.setAttribute("has-popup", "listbox");
+customSelector.setAttribute("aria-owns", "custom-select-list");
 
 csDropdown.setAttribute("role", "listbox");
 
@@ -23,34 +25,24 @@ csOptions.forEach(option => {
 
 // EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 
 
-// open & close dropdown
-csTrigger.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-        if (csDropdown.classList.contains('open-dropdown')) {
-            closeDropdown();
-        } else {
+customSelector.addEventListener('click', e => {
+    const currentFocus = findFocus();
+    switch(csState) {
+        case 'initial' :
             openDropdown();
-        }
-    })
-})
-
-// select option 
-csOptions.forEach(option => {
-    option.addEventListener('click', () => {
-        // check that the clicked option is not selected
-        if (!option.classList.contains('selected')) {
-            // find the selected option and unselect
-            option.parentNode.querySelector('.custom-select__item.selected').classList.remove('selected');
-        }
-        // select clicked option
-        option.classList.add('selected');
-        
-        // set input value to the text in selected option
-        csInput.value = option.textContent;
-
-        // close dropdown
-        closeDropdown()
-    })
+            setState('opened');
+            break;
+        case 'opened' :
+            if (currentFocus === csInput) {
+                closeDropdown();
+                setState('initial');
+            } else if (currentFocus.tagName === 'LI') {
+                makeSelection(currentFocus);
+                closeDropdown();
+                setState('initial');
+            }
+            break;
+    }
 })
 
 // FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
@@ -69,7 +61,27 @@ function closeDropdown() {
     csArrow.classList.remove('is-open');
 }
 
+function makeSelection(option) {
+    // check that the clicked option is not selected
+    if (!option.classList.contains('selected')) {
+        // find the selected option and unselect
+        option.parentNode.querySelector('.custom-select__item.selected').classList.remove('selected');
+    }
+    // select clicked option
+    option.classList.add('selected');
+    
+    // set input value to the text in selected option
+    csInput.value = option.textContent;
+}
 
+function setState(newState) {
+    csState = newState;
+}
+
+function findFocus() {
+    const focusPoint = document.activeElement;
+    return focusPoint;
+}
 // =========== FORM VALIDATION ====================================
 // Name is required, Email is required, Email needs to be email
 
