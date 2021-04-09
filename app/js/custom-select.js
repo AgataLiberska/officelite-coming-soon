@@ -26,6 +26,10 @@ csOptions.forEach(option => {
 
 // FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
+function setState(newState) {
+    csState = newState;
+}
+
 function openDropdown() {
     csDropdown.classList.remove('close-dropdown');
     csDropdown.classList.add('open-dropdown');
@@ -51,10 +55,6 @@ function makeSelection(option) {
     option.classList.add('selected');
     option.setAttribute('aria-selected', 'true');
     csInput.value = option.textContent;
-}
-
-function setState(newState) {
-    csState = newState;
 }
 
 function findFocus() {
@@ -197,16 +197,9 @@ customSelect.addEventListener('keyup', e => {
     handleKeyAction(e.key);
 })
 
-customSelect.addEventListener('focusout', e => {
-    if (e.relatedTarget.tagName === 'INPUT' && e.relatedTarget !== csInput) {
+customSelect.addEventListener('focusout', e => { 
+    if (!e.relatedTarget || (e.relatedTarget.tagName === 'INPUT' && e.relatedTarget !== csInput)) {
         closeDropdown();
         setState('initial');
-    }
-})
-
-document.addEventListener('click', e => {
-    if (csState === 'opened' && !e.target.closest('.js-custom-select')) {
-        closeDropdown();
-        setState('initial');
-    }
+    } 
 })
