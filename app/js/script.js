@@ -45,6 +45,13 @@ customSelector.addEventListener('click', e => {
     }
 })
 
+document.addEventListener('click', e => {
+    if (!e.target.closest('.js-custom-select')) {
+        closeDropdown();
+        setState('initial');
+    }
+})
+
 // FUNCTIONS - - - - - - - - - - - - - - - - - - - - - - 
 
 function openDropdown() {
