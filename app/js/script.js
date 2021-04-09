@@ -217,6 +217,8 @@ const form = document.querySelector('.form');
 const nameInput = document.querySelector('.js-form-name');
 const emailInput = document.querySelector('.js-form-email');
 
+form.setAttribute("novalidate", "");
+
 // EVENT LISTENERS - - - - - - - - - - - - - - - - - - - 
 
 // Check validity of the form on submit

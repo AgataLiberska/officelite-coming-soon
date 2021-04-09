@@ -61,20 +61,21 @@
       </div>
     </div>
     <div class="signup__info">
-      <form action="" class="form signup__form" novalidate>
+      <form action="" class="form signup__form">
         <div class="form__group">
-          <label for="name" class="hidden-visually">Name</label>
+          <label for="name" class="hidden-visually">Enter name</label>
           <input id="name" type="text" name="name" class="form__control js-form-name" placeholder="Name" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="form__group">
-          <label for="email" class="hidden-visually">Email</label>
+          <label for="email" class="hidden-visually">Enter email</label>
           <input id="email" type="email" name="email" class="form__control js-form-email" placeholder="Email" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
         <div class="custom-select">
-          <input type="text" name="plan" aria-label="Select plan" class="form__control custom-select__input signup__form__plan" value="Basic Pack">
+          <input type="text" name="plan" aria-describedby="custom-select-info" class="form__control custom-select__input signup__form__plan" value="Basic Pack">
           <span class="custom-select__icon"><img src="/assets/sign-up/icon-arrow-down.svg" alt="" ></span>
+          <p class="hidden-visually" id="custom-select-info">Select plan - arrow down for options, Enter to select</p>
           <ul class="custom-select__dropdown toggleable " id="custom-select-list">
             <li class="custom-select__item signup__form__plan basic selected" data-value="Basic">Basic Pack</li>
             <li class="custom-select__item signup__form__plan pro" data-value="Pro">Pro Pack</li>
