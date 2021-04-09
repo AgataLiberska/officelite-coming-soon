@@ -57,6 +57,14 @@ customSelect.addEventListener('keyup', e => {
     handleKeyAction(e.key);
 })
 
+customSelect.addEventListener('focusout', e => {
+    console.log(e);
+    if (e.relatedTarget.tagName === 'INPUT') {
+        closeDropdown();
+        setState('initial');
+    }
+})
+
 document.addEventListener('click', e => {
     if (csState === 'opened' && !e.target.closest('.js-custom-select')) {
         closeDropdown();
