@@ -196,6 +196,29 @@ a, a:hover, a:visited {
   background-color: #829cff;
 }
 
+.btn--cta:focus {
+  outline: 0;
+  background-color: #829cff;
+  -webkit-box-shadow: 0 0 1px 2px #f2f2f2, 0 0 3px 4px #829cff;
+          box-shadow: 0 0 1px 2px #f2f2f2, 0 0 3px 4px #829cff;
+}
+
+.btn--cta--darkbg {
+  color: white;
+  background-color: #5175ff;
+}
+
+.btn--cta--darkbg:hover {
+  background-color: #829cff;
+}
+
+.btn--cta--darkbg:focus {
+  outline: 0;
+  background-color: #829cff;
+  -webkit-box-shadow: 0 0 1px 2px #333950, 0 0 3px 4px #829cff;
+          box-shadow: 0 0 1px 2px #333950, 0 0 3px 4px #829cff;
+}
+
 .btn--blue {
   color: #5175ff;
   background-color: rgba(81, 117, 255, 0.15);
@@ -205,6 +228,13 @@ a, a:hover, a:visited {
   background-color: rgba(81, 117, 255, 0.25);
 }
 
+.btn--blue:focus {
+  outline: 0;
+  background-color: rgba(81, 117, 255, 0.25);
+  -webkit-box-shadow: 0 0 1px 2px white, 0 0 3px 4px rgba(81, 117, 255, 0.25);
+          box-shadow: 0 0 1px 2px white, 0 0 3px 4px rgba(81, 117, 255, 0.25);
+}
+
 .btn--white {
   color: #5175ff;
   background-color: white;
@@ -212,6 +242,13 @@ a, a:hover, a:visited {
 
 .btn--white:hover {
   color: #829cff;
+}
+
+.btn--white:focus {
+  outline: 0;
+  color: #829cff;
+  -webkit-box-shadow: 0 0 1px 2px #829cff, 0 0 3px 4px white;
+          box-shadow: 0 0 1px 2px #829cff, 0 0 3px 4px white;
 }
 
 .header {

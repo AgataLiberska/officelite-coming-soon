@@ -7,6 +7,7 @@
     font-weight: 700;
     line-height: 3.5rem;
     transition: all 200ms ease-in-out;
+    
 }
 
 .btn--cta {
@@ -15,6 +16,31 @@
 
     &:hover {
         background-color: $medBlue;
+    }
+
+    &:focus {
+        outline: 0;
+        background-color: $medBlue;
+        box-shadow: 
+            0 0 1px 2px $veryLightGray,
+            0 0 3px 4px $medBlue;
+    }
+}
+
+.btn--cta--darkbg {
+    color: white;
+    background-color: $blue;
+
+    &:hover {
+        background-color: $medBlue;
+    }
+
+    &:focus {
+        outline: 0;
+        background-color: $medBlue;
+        box-shadow: 
+            0 0 1px 2px $darkGray,
+            0 0 3px 4px $medBlue;
     }
 }
 
@@ -25,6 +51,14 @@
     &:hover {
         background-color: $lightBlue;
     }
+
+    &:focus {
+        outline: 0;
+        background-color: $lightBlue;
+        box-shadow: 
+            0 0 1px 2px $white,
+            0 0 3px 4px $lightBlue;
+    }
 }
 
 .btn--white {
@@ -33,5 +67,13 @@
 
     &:hover {
         color: $medBlue;
+    }
+
+    &:focus {
+        outline: 0;
+        color: $medBlue;
+        box-shadow: 
+            0 0 1px 2px $medBlue,
+            0 0 3px 4px $white;
     }
 }
