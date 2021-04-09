@@ -229,6 +229,27 @@ a, a:hover, a:visited {
   }
 }
 
+.header__logo {
+  position: relative;
+  outline: 0;
+}
+
+.header__logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  height: 0;
+  width: 100%;
+  background-color: #829cff;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
+}
+
+.header__logo:focus::after {
+  height: 2px;
+}
+
 .countdown-clock__heading {
   display: block;
   padding-bottom: 1.125rem;
