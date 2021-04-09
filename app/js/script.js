@@ -74,7 +74,7 @@ function openDropdown() {
 function closeDropdown() {
     csDropdown.classList.remove('open-dropdown');
     csDropdown.classList.add('close-dropdown');
-    csDropdown.setAttribute('aria-expanded', 'false');
+    csDropdown.removeAttribute('aria-expanded');
     csArrow.classList.remove('is-open');
 }
 
@@ -82,9 +82,12 @@ function makeSelection(option) {
     // check that the clicked option is not selected
     if (!option.classList.contains('selected')) {
         // find the selected option and unselect
-        option.parentNode.querySelector('.custom-select__item.selected').classList.remove('selected');
+        let unselected = option.parentNode.querySelector('.custom-select__item.selected')
+        unselected.classList.remove('selected');
+        unselected.removeAttribute('aria-selected');
     }
     option.classList.add('selected');
+    option.setAttribute('aria-selected', 'true');
     csInput.value = option.textContent;
 }
 
@@ -110,13 +113,13 @@ function handleKeyAction(key) {
             //if dropdown is opened and focus is on input, close
             else if (csState === 'opened' && currentFocus === csInput) {
                 closeDropdown();
-                setState('closed');
+                setState('initial');
             }
             // if dropdown is opened and focus is on option, select and close
             else if (csState === 'opened' && currentFocus.tagName === 'LI') {
                 makeSelection(currentFocus);
                 closeDropdown();
-                setState('closed');
+                setState('initial');
             }
             break;
         case 'Space':
@@ -125,7 +128,6 @@ function handleKeyAction(key) {
                 setState('opened');
             }
             break;
-        case 
     }
 }
 // =========== FORM VALIDATION ====================================
