@@ -1,13 +1,24 @@
 // ========= CUSTOM SELECT DROPDOWN ==========================
 
+const customSelectContainer = document.querySelector('.js-custom-select');
 const customSelectTrigger = document.querySelectorAll('.js-custom-select-trigger');
 const customSelectArrow = document.querySelector('.custom-select__icon');
 const customSelectDropdown = document.querySelector('.custom-select__dropdown');
 const customSelectOptions = document.querySelectorAll('.custom-select__item');
 const customSelectInput = document.querySelector('.custom-select__input');
 
+customSelectContainer.setAttribute("role", "combobox");
+customSelectContainer.setAttribute("has-popup", "listbox");
+customSelectContainer.setAttribute("aria-owns", "custom-select-list");
+
+customSelectDropdown.setAttribute("role", "listbox");
+
+customSelectInput.setAttribute("aria-autocomplere", "both");
+customSelectInput.setAttribute("aria-controls", "custom-select-list");
+
 customSelectOptions.forEach(option => {
-    option.setAttribute('tabindex', '-1');
+    option.setAttribute("role", "option")
+    option.setAttribute("tabindex","-1");
 })
 
 // EVENT LISTENERS - - - - - - - - - - - - - - - - - - - - - - - - 

@@ -72,10 +72,10 @@
           <input id="email" type="email" name="email" class="form__control js-form-email" placeholder="Email" required>
           <img src="/assets/sign-up/icon-cross.svg" class="form__control__error hidden" alt="Invalid input">
         </div>
-        <div class="custom-select">
+        <div class="custom-select js-custom-select">
           <input type="text" name="plan" aria-label="Select plan" class="form__control custom-select__input js-custom-select-trigger signup__form__plan" value="Basic Pack">
           <span class="custom-select__icon js-custom-select-trigger"><img src="/assets/sign-up/icon-arrow-down.svg" alt="" ></span>
-          <ul class="custom-select__dropdown toggleable ">
+          <ul class="custom-select__dropdown toggleable " id="custom-select-list">
             <li class="custom-select__item signup__form__plan basic selected" data-value="Basic">Basic Pack</li>
             <li class="custom-select__item signup__form__plan pro" data-value="Pro">Pro Pack</li>
             <li class="custom-select__item signup__form__plan ultimate" data-value="Ultimate">Ultimate Pack</li>
