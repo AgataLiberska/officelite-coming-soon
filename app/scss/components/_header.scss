@@ -10,3 +10,24 @@
         text-align: left;
     }
 }
+
+.header__logo {
+    position: relative;
+    outline: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.125rem;
+        height: 0;
+        width: 100%;
+        background-color: $medBlue;
+        transition: height 200ms ease-in-out;
+    }
+
+    &:focus::after {
+        height: 2px;
+    }
+
+}
