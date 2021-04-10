@@ -90,6 +90,8 @@ customSelect.addEventListener('focusout', e => {
 
 To improve accessibility further, I also added `autocomplete` attribute to other form inputs and custom focus styles throughout the page.
 
+- I learnt that with some browser and screenreader combinations, the screen reader does not announce lists properly when `list-style` is set to none. To fix this behaviour, I decided to add `role=list` and `role=listitem` to the relevant elements, which can be picked up by HTML validators as unnecessary aria attribute. [I linked articles on this topic below in useful resources](#useful-resources)
+
 ### Continued development
 
 I loved the challege of creating the countdown and custom select element, and I want to continue learning about accessibility.
@@ -102,6 +104,10 @@ The resources below really helped me understand how to make the custom select ac
 - [WAI-ARIA 1.1 W3C Recommendation](https://www.w3.org/TR/wai-aria-1.1/#combobox)
 - [Making a Better Custom Select Element by Julie Grundy](https://24ways.org/2019/making-a-better-custom-select-element/) 
 - [Accessible custom select by Julie Grundy and Oliver Boermans](https://github.com/stringyland/custom-select)
+
+Voiceover issues in lists:
+- [VoiceOver and list-style-type: none by Gerard K. Cohen](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
+- [Fixing lists by Scott O'Hara](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
 
 ## Author
 
